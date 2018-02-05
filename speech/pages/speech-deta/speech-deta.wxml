@@ -1,0 +1,63 @@
+<!--pages/speech-deta/speech-deta.wxml-->
+<view class="wrap">
+  <view class="Video">
+    <video bindplay="playClick" data-id='{{id}}' id="myVideo" src="{{url}}" poster="{{face}}" controls></video>
+    <view class="videodate">{{crttm}}</view>
+  </view>
+  <view class="BottomBlock">
+    <scroll-view bindscrolltolower="footerEvent" class="ScrollView" scroll-y="true"> 
+      <view class="deta_header">
+        <view class="deta_headerTitle">{{title}}</view>
+        <view class="deta_headerText">{{sign}}</view>
+        <navigator url="../speech-text/speech-text?id={{id}}" class="deta_headerHref">
+          <image class="deta_headerHrefImg" src="../../images/icon_more@2x.png"></image>
+          <view class="deta_headerTextRight">完整演讲稿</view>
+        </navigator>
+        <!--作家  -->
+        <navigator class="deta_headBox" url="../data/data?id={{uid}}">
+          <image class="deta_headBoxImg" src="{{uface}}"></image>
+          <view class="deta_headBoxName">{{nickname}}</view>
+          <view class="deta_headBoxJob">{{position}}</view>
+        </navigator>
+      </view>
+
+      <!-- 全部评论 -->
+      <view class="video_comment">
+        <view class="video_commentTitle">全部评论</view>
+        <view class="video_commBar" wx:for="{{list}}">
+          <view class="video_commBarImg">
+            <image src="{{item.face}}"></image>
+          </view>
+          <view class="video_commBarBox">
+            <view class="video_commBarBoxName">{{item.nickname}}</view>
+            <view class="video_commBarBoxText">{{item.content}}</view>
+            <view class="video_commBarBoxtime">
+              <view class="video_commBarBoxdate">{{item.crttm}}</view>
+              <!--点赞  -->
+              <!-- <view class="video_commBarBoxZan">
+                <image class="video_commBarBoxIcon" src="../../images/icon_good@2x.png"></image> 
+                <image class="video_commBarBoxIcon" src="../../images/icon_good_per@2x.png"></image>
+                3290
+              </view> -->
+            </view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>
+
+<view class="footer" bindtap='commentBtn' hidden='{{commentShow?true:false}}'>
+  <image class="footerIcon" src="../../images/bottom_icon_comment@2x.png"></image>
+  发表评论
+</view> 
+<view class="footerInp" hidden='{{commentShow?false:true}}'>
+  <input placeholder='发表你的评论' focus="{{commentShow?true:false}}" bindinput='PublisInp' value='{{PublisVal}}' class="footerInpCommen"></input>
+  <button class="footerInpBtn" bindtap='PublisBtn'>发表</button> 
+</view>
+<!--提示  -->
+<view class="msgShowBox" hidden="{{msgShow}}">
+  {{resultMsg}}
+</view>
+<!--  登录模板-->
+<include src="../../utils/courseList.wxml"/>

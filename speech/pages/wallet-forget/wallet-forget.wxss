@@ -1,0 +1,5 @@
+/* pages/wallet-forget/wallet-forget.wxss */
+page{
+  height:100%;
+  background-color: #f6f6f6;
+}

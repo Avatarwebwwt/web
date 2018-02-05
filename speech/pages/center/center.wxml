@@ -1,0 +1,133 @@
+<!--pages/center/center.wxml-->
+<view class="wrap">
+  <view class="center_header">
+    <image class="center_headerBg" src="../../images/individual_bg@2x.png"></image>
+    <view class="header_RqBox">
+      <navigator url="../RQ/RQ?id={{userid}}" wx:if="{{token}}">
+         <image class="header_Rq" src="../../images/icon_individual_saoma@2x.png"></image>
+      </navigator> 
+      <view url="" bindtap='loginShowClick' wx:else>
+         <image class="header_Rq" src="../../images/icon_individual_saoma@2x.png"></image>
+      </view>
+
+      <navigator url="../news/news" wx:if="{{token}}">
+        <image class="header_sms" src="../../images/icon_individual_information-@2x.png"></image>
+      </navigator>
+      <view url="../news/news" bindtap='loginShowClick' wx:else>
+        <image class="header_sms" src="../../images/icon_individual_information-@2x.png"></image>
+      </view>
+    </view>
+    <view class="center_headerBox">
+      <view class="header_Img" catchtap="{{token?'dataShow':'loginShowClick'}}">
+        <image class="header_ImgFace" wx:if="{{token}}" src="{{face}}"></image>
+        <image class="header_ImgFace" src="{{avatarUrl}}" wx:else></image>
+        <image class="header_ImgVip" src="../../images/icon_opening_mine_2_highlight@2x.png" hidden='{{false}}' wx:if="{{vip==1}}"></image>
+        <image class="header_ImgVip" src="../../images/icon_opening_mine_1_nor@2x.png" hidden='{{false}}' wx:else></image>
+      </view> 
+      <view class="header_Text">
+        <view class="header_TextName">
+          <text wx:if="{{token}}" catchtap='dataShow'>{{name}}</text>  
+          <text wx:else catchtap='loginShowClick'>{{nickName}}</text>
+          <image class="addIcon" catchtap="vipClick" src="../../images/icon_angels_mine_1_nor@2x.png" wx:if="{{rankone==1}}"></image>
+          <image class="addIcon" catchtap="vipClick" src="../../images/icon_greatgods_mine_1_nor@2x.png" wx:if="{{ranktwo==1}}"></image>
+          <!-- <image src="../../images/vip@2x.png" hidden='{{false}}' wx:if="{{vip==1}}"></image>  -->
+        </view>
+        <view class="header_TextJob" catchtap='dataShow' wx:if="{{token}}">{{position}}</view>
+        <view class="header_TextJob" catchtap='loginShowClick' wx:else>工作室或职称</view> 
+        <view class="header_TextCodeBox">
+          <view class="header_TextCodeText">授权码</view>
+          <text class="header_TextCodeCode" wx:if="{{token}}" selectable="true">{{code}}</text>
+          <text class="header_TextCodeCode" wx:else>----</text> 
+          <button class="header_TextCodeCopy" catchtap='copyBtn' hover-class="header_TextCodeCopyBtn">复制</button>
+        </view>
+      </view>
+    </view>
+    <!--收益  -->
+    <view class="header_List">
+      <view class="header_ListBar">
+         <view class="header_ListBarTitle">今日收益</view>
+         <view class="header_ListBarNun" wx:if="{{token}}">{{todaycount}}</view>
+         <view class="header_ListBarNun" wx:else>--</view>
+      </view>
+      <view class="header_ListBar">
+         <view class="header_ListBarTitle">累计收益</view>
+         <view class="header_ListBarNun" wx:if="{{token}}">{{allcount}}</view>
+         <view class="header_ListBarNun" wx:else>--</view>
+      </view>
+      <view class="header_ListBar">
+         <view class="header_ListBarTitle">会员人数</view>
+         <view class="header_ListBarNun" wx:if="{{token}}">{{member}}</view>
+         <view class="header_ListBarNun" wx:else>--</view>
+      </view>
+      <view class="hr7"></view>
+      <view class="hr8"></view>
+    </view>
+  </view>
+  <!--main  -->
+  <view class="center_main">
+    <view class="main_list">
+      <navigator class="main_listBar" catchtap="{{token?'':'loginShowClick'}}" url="{{token?'../center-member/center-member':''}}">
+        <view class="main_listBarLeft">
+          <image class="main_listBarIcon" src="../../images/icon_vip_mine_2_highlight@2x.png" wx:if="{{vip==1}}"></image> 
+          <image class="main_listBarIcon" src="../../images/icon_vip_mine_1_nor@2x.png" wx:else></image>
+          <view class="main_listBarText">开通365会员</view>
+        </view>
+        <image class="main_listBarImg" src="../../images/icon_next@2x.png"></image>
+      </navigator>
+      <navigator catchtap="{{token?'':'loginShowClick'}}" url="{{token?'../center-distri/center-distri':''}}"  class="main_listBar">
+        <view class="main_listBarLeft">
+          <image class="main_listBarIcon" src="../../images/icon_party_mine_1_nor@2x.png"></image>
+          <view class="main_listBarText">我的团队</view>
+        </view>
+        <image class="main_listBarImg" src="../../images/icon_next@2x.png"></image>
+      </navigator>
+    </view>
+    <view class="hr9"></view>
+
+    <view class="main_list">
+      <navigator catchtap="{{token?'':'loginShowClick'}}" url="{{token?'../wallet/wallet':''}}"   class="main_listBar">
+        <view class="main_listBarLeft">
+          <image class="main_listBarIcon" src="../../images/icon_wallet_mine_1_nor@2x.png"></image>
+          <view class="main_listBarText">我的钱包</view>
+        </view>
+        <image class="main_listBarImg" src="../../images/icon_next@2x.png"></image>
+      </navigator>
+      <navigator catchtap="{{token?'':'loginShowClick'}}" url="{{token?'../center-mycourse/center-mycourse':''}}" hover-class='none' class="main_listBar">
+        <view class="main_listBarLeft">
+          <image class="main_listBarIcon" src="../../images/icon_class_mine_1_nor@2x.png"></image>
+          <view class="main_listBarText">我的课程</view>
+        </view>
+        <image class="main_listBarImg" src="../../images/icon_next@2x.png"></image>
+      </navigator>
+    </view>
+    <!--课程列表  -->
+    <scroll-view hidden="{{token?false:true}}" class="main_listCourse" scroll-x>
+      <navigator hover-class='none' url="../intro/intro?id={{item.id}}" class="main_CourseBar" wx:for="{{list}}">
+        <view class="main_CourseBarImg">
+          <image src="{{item.face}}"></image>
+          <!-- <view class="main_CourseBarBox">观看至13%</view> -->
+        </view> 
+        <view class="main_CourseBarText">{{item.title}}</view>
+      </navigator>
+    </scroll-view> 
+    
+    <view class="hr9"></view>
+    <!-- <view class="main_list">
+      <navigator catchtap="{{token?'':'loginShowClick'}}" url="{{token?'../center-set/center-set':''}}"  class="main_listBar">
+        <view class="main_listBarLeft">
+          <image class="main_listBarIcon" src="../../images/icon_setup_mine_1_nor@2x.png"></image>
+          <view class="main_listBarText">设置</view>
+        </view>
+        <image class="main_listBarImg" src="../../images/icon_next@2x.png"></image>
+      </navigator>
+    </view>
+    <view class="hr9"></view> -->
+  </view>
+</view>
+
+<!--提示  -->
+<view class="msgShowBox" hidden="{{msgShow}}">
+  {{resultMsg}}
+</view>
+<!--  登录模板-->
+<include src="../../utils/courseList.wxml"/>

@@ -1,0 +1,40 @@
+/* pages/vipOpen/vipOpen.wxss */
+.wrap{
+  box-sizing: border-box;
+  padding: 0 60rpx;
+}
+.member_mainBtn{
+  background:rgba(239,150,3,1);
+  color: #fff;
+  font-size:36rpx;
+  margin: 50rpx 0rpx;
+}
+.mainInp{
+  font-size:30rpx;
+  height:88rpx; 
+  background:rgba(218,218,218,1);
+  width:100%;
+  box-sizing: border-box;
+  padding: 0 20rpx;
+  text-align: center;
+  border-radius: 10rpx;
+}
+.main_title{
+  font-size: 36rpx;
+  color: #333;
+  width:100%;
+  text-align: center;
+  line-height: 96rpx;
+}
+.member_mainBox{
+  padding-top: 0;
+}
+.mian_RQ,
+.mian_RQ image{
+  width:80rpx;
+  height:80rpx; 
+}
+.mian_RQ image{
+  margin-top: -10rpx;
+  margin-left: 10px;
+}

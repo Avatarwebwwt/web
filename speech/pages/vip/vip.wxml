@@ -1,0 +1,42 @@
+<!--pages/vip/vip.wxml-->
+<view class="wrap">
+  <view class="swiper-tab">  
+    <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">可用码</view>  
+    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">已使用</view>  
+  </view>  
+    
+  <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight-36}}px" bindchange="bindChange">  
+      <!-- 简介 -->  
+    <swiper-item>  
+      <scroll-view bindscrolltolower="addVip" class="intro_main" style="height:{{winHeight-36}}px" scroll-y="true">
+        <view class="vipList">
+          <view class="vipListBar" wx:for="{{list}}">
+            <view class="vipListBarBox">
+              <view class="vipListBarBoxLeft">VIP服务码</view>
+              <view class="vipListBarBoxRight">{{item.code}}</view>
+            </view>
+            <view class="vipListBarText" id="{{item.code}}" bindtap='copyBtn'>复制使用</view>
+          </view>
+        </view>
+      </scroll-view>  
+    </swiper-item>  
+    <!-- 目录 -->  
+    <swiper-item>  
+      <scroll-view bindscrolltolower="addVip" class="Catalog" style="height:{{winHeight-36}}px" scroll-y="true">
+        <view class="vipList">
+          <view class="vipListBar" wx:for="{{list}}">
+            <view class="vipListBarBox">
+              <view class="vipListBarBoxLeft leftActive">VIP服务码</view>
+              <view class="vipListBarBoxRight RightActive">{{item.code}}</view>
+            </view>
+            <view class="vipListBarText active">已失效</view>
+          </view>
+        </view>
+      </scroll-view>  
+    </swiper-item>  
+  </swiper>  
+</view>
+<!--提示  -->
+<view class="msgShowBox" hidden="{{msgShow}}">
+  {{resultMsg}}
+</view>

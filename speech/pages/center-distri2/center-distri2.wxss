@@ -1,0 +1,4 @@
+/* pages/center-distri2/center-distri2.wxss */
+.news_BoxText{
+ color: #999999;
+}

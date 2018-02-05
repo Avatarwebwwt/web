@@ -1,0 +1,22 @@
+<!--pages/wallet-info/wallet-info.wxml-->
+<view class="wrap">
+  <!-- <view class="info_head"></view> -->
+  <view class="infoMain">
+    <navigator url="../wallet-data/wallet-data?id={{item.id}}" class="infoBar" wx:for="{{list}}">
+      <view class="infoBar_img"><image src="{{item.face}}"></image></view>
+      <view class="infoBar_Box">
+        <view class="infoBar_BoxLeft">
+          <view class="infoBar_BoxTitle">{{item.remark}}</view>
+          <view class="infoBar_BoxDate">{{item.crttm}}</view>
+        </view>
+        <view class="infoBar_BoxRight" wx:if="{{item.flag==0}}">-{{item.money}}</view>
+        <view class="infoBar_BoxRight" wx:else>+{{item.money}}</view>
+      </view>
+    </navigator>
+  </view>
+</view>
+
+<!--提示  -->
+<view class="msgShowBox" hidden="{{msgShow}}">
+  {{resultMsg}}
+</view>

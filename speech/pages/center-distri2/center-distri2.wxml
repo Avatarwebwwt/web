@@ -1,0 +1,27 @@
+<!--pages/center-distri2/center-distri2.wxml-->
+<view class="wrap">
+  <view class="news_main">
+    <navigator class="news_list" hover-class='none' wx:for="{{memberlist}}" url="../data/data?id={{item.uid}}">
+      <view class="news_listLeft">
+        <view class="news_face">
+          <image src="{{item.face}}"></image>
+        </view>
+        <view class="news_Box">
+            <view class="news_BoxTop">
+              <!-- <view class="hr10"></view> -->
+              <view class="news_BoxTitle">{{item.nickname}}</view>
+            </view>
+            <view class="news_BoxText">{{item.sign}}</view>
+        </view>
+      </view>
+      <!-- <view catchtap='subordinate' class="news_time distriActive">TA的下级</view> -->
+    </navigator>
+  </view>
+</view>
+
+
+<!--提示  -->
+<view class="msgShowBox" hidden="{{msgShow}}">
+  {{resultMsg}}
+</view>
+

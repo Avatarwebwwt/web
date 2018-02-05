@@ -1,0 +1,43 @@
+/* pages/wallet-add/wallet-add.wxss */
+page{
+  height:100%;
+  background-color: #f6f6f6;
+}
+.add_title{
+  width:100%;
+  height:98rpx;
+  line-height: 98rpx;
+  color: #666666;
+  font-size: 30rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+.add_list{
+  width:100%;
+  background-color: #fff;
+}
+.add_listBar{
+  padding: 0 20rpx;
+  width:100%;
+  box-sizing: border-box;
+  border-bottom: 1rpx solid #f6f6f6;
+  display: flex;
+  line-height: 98rpx;
+  color: #333;
+  font-size: 28rpx;
+}
+.add_listBarInp{
+  height:98rpx;
+  width:480rpx;
+}
+.add_listBarName{
+  width:200rpx;
+}
+.recharg_Btn{
+  margin: 150rpx auto;
+}
+.pickerIcon{
+  width:14rpx;
+  height:24rpx;
+  margin-top: 40rpx;
+}

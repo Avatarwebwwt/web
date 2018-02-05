@@ -1,0 +1,35 @@
+<!--pages/wallet-bank/wallet-bank.wxml-->
+<view class="wrap">
+  <view class="recharg_wechat bank_header">
+    <view class="recharg_wechatText">到账银行卡</view>
+    <view class="recharg_wechatText" bindtap='emptyShowBtn' hidden='{{is_show?false:true}}'>删除</view>
+    <view class="recharg_wechatText" bindtap='emptyShowBtn' hidden='{{is_show?true:false}}'>完成</view>
+  </view>
+  <view class="bank_MianBox" id="{{item.id}}" wx:for="{{list}}" bindtap='activeBtn'>
+    <view class="recharg_wechatEmpty {{emptyShow?'active':''}}">
+      <!-- <image id="{{item.id}}" catchtap='emptyBtn' hidden='{{emptyShow}}' src="../../images/icon_delete_per@2x.png"></image>  -->
+      <image src="{{item.logo}}" class="recharg_wechatEmptyLogo"></image>
+      <view class="recharg_wechatTexts">
+        <view>{{item.bankname}}</view>
+        <view>({{item.cardno}})</view>
+      </view>
+    </view>
+    <view class="recharg_wechatBtn" id="{{item.id}}" catchtap='emptyBtn' hidden='{{emptyShow}}'>删除</view>
+    <!-- <view class="recharg_wechatIcon">
+      <image src="../../images/icon_payment_per@2x.png" wx:if="{{item.id==isId}}"></image> 
+      <image src="../../images/icon_payment@2x.png" wx:else></image> 
+    </view> -->
+  </view>
+  <view class="rechargMainsBox">
+    <navigator open-type="redirect" url="../wallet-add/wallet-add" class="rechargMains">
+    <image class="rechargMainIcon" src="../../images/icon_add_sel@2x.png"></image>使用新卡提现
+  </navigator>  
+  </view>
+    <!-- <button class="recharg_Btn walletBtnClass" bindtap='btn' hover-class="BtnClass">确认</button>  -->
+</view>
+
+<!--提示  -->
+<view class="msgShowBox" hidden="{{msgShow}}">
+  {{resultMsg}}
+</view>
+

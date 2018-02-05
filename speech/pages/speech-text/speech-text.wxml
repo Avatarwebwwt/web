@@ -1,0 +1,16 @@
+<!--pages/speech-text/speech-text.wxml-->
+<view class="wrap">
+  <view class="textHeader">
+    <view class="textHeader_title">{{title}}</view>
+    <view class="textHeader_name">讲者/{{nickname}}</view>
+  </view>
+  <view class="textHeader_bar"></view>
+  <view class="textContent">
+    <view class="textContent_Text" wx:for="{{list}}">{{item.content}}</view>
+  </view>
+</view>
+
+<!--提示  -->
+<view class="msgShowBox" hidden="{{msgShow}}">
+  {{resultMsg}}
+</view>

@@ -1,0 +1,6 @@
+<!--pages/success/success.wxml-->
+<view class="wrap">
+  <image class="img" src="../../images/icon_complete_mine@2x.png"></image>
+  <text class="text">本次开通VIP服务时长365天</text>
+  <navigator url="../center/center" open-type="switchTab" class="btn">确定</navigator>
+</view>

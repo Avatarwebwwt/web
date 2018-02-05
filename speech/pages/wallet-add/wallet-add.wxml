@@ -1,0 +1,36 @@
+<!--pages/wallet-add/wallet-add.wxml-->
+<view class="wrap">
+  <view class="add_title">到账银行卡</view>
+  <view class="add_list">
+    <view class="add_listBar">
+      <view class="add_listBarName">姓名</view>
+      <input class="add_listBarInp" maxlength='10' value='{{nameVal}}' bindinput="nameInp" placeholder='请输入持卡人姓名'></input>
+    </view>
+    <view class="add_listBar">
+      <view class="add_listBarName">卡号</view>
+      <input class="add_listBarInp" maxlength='19' value='{{numberVal}}' bindinput="numberInp" placeholder='请输入银行卡号'></input>
+    </view>
+    <view class="add_listBar">
+      <view class="add_listBarName">银行</view>
+      <picker bindchange="bindPickerChange" id="{{arrId}}" class="add_listBarInp" value="{{index}}" range="{{array}}">
+        <view class="picker">
+          {{array[index]}}
+        </view>
+      </picker>
+      <image src="../../images/icon_next@2x.png" class="pickerIcon"></image>
+      <!-- <input class="add_listBarInp" value='{{bankVal}}' bindinput="bankInp" placeholder='请输入银行'></input> -->
+    </view>
+    <view class="add_listBar">
+      <view class="add_listBarName">预留电话</view>
+      <input class="add_listBarInp" maxlength='11' type='number' value='{{phoneVal}}' bindinput="phoneInp" placeholder='请输入预留的手机号码'></input>
+    </view>
+  </view>
+  <button hidden="{{btnShow?true:false}}" class="recharg_Btn walletBtnClass" hover-class="BtnClass" bindtap='passwordBtn'>确定</button> 
+  <button hidden="{{btnShow ? false:true}}" class="recharg_Btn">确定</button>
+</view>
+
+<!--提示  -->
+<view class="msgShowBox" hidden="{{msgShow}}">
+  {{resultMsg}}
+</view>
+

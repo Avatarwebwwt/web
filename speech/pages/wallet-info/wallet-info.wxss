@@ -1,0 +1,58 @@
+/* pages/wallet-info/wallet-info.wxss */
+.infoMain{
+  width:100%;
+  padding-left: 20rpx;
+  box-sizing: border-box;
+}
+.infoBar{
+  width:100%;
+  border-bottom: 1rpx solid #e6e6e6;
+  display: flex;
+  padding: 26rpx 0;
+  box-sizing: border-box;
+}
+.infoBar_img,
+.infoBar_img image{
+  width:88rpx;
+  height:88rpx;
+  border-radius: 50%;
+}
+.infoBar_img{
+  /* padding-top: 20rpx; */
+}
+.infoBar_Box{
+  padding-left: 20rpx;
+  padding-right: 30rpx;
+  width:645rpx;
+  height:88rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+.infoBar_BoxLeft{
+  display: flex;
+  flex-direction:column;
+ 
+  /* line-height: 40rpx;   */
+  /* padding: 10rpx 0; */
+}
+.infoBar_BoxTitle{
+  font-size: 30rpx;
+  color: #333333;
+  width: 338rpx;
+   text-overflow:ellipsis;
+   overflow:hidden;
+   white-space:nowrap;
+}
+
+.infoBar_BoxDate{
+  font-size: 22rpx;
+  color: #999999;
+  margin-top: 20rpx;
+}
+.infoBar_BoxRight{
+  line-height: 100rpx;
+  font-size: 30rpx;
+	color: #333333;
+  font-weight: bold;
+}

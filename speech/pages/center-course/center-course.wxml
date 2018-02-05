@@ -1,0 +1,22 @@
+<!--pages/center-course/center-course.wxml-->
+<view class="wrap">
+  <navigator class="mainBar" wx:for="{{list}}" url="../intro/intro?id={{item.id}}">
+     <image class="mainBarBg" lazy-load="true" src="{{item.face}}"></image>  
+     <!-- <view style="background:url({{item.face}}) no-repeat;" class="mainBarBg"></view>  -->
+    <view class="mask"></view>
+    <view class="mainBarText">
+      <view class="mainBarTitle">{{item.title}}</view>
+      <view class="mainBarName">{{item.nickname}}</view>
+      <view class="mainBarBox">
+        <view class="mainBarBoxTime">{{item.classcount}}课时</view>
+        <view class="mainBarBoxNum">{{item.buycount}}人已购</view>
+      </view>
+       <view class="mainBarBoxPrice"><text>￥</text>{{item.money}}</view>
+    </view>
+  </navigator>
+</view>
+
+<!--提示  -->
+<view class="msgShowBox" hidden="{{msgShow}}">
+  {{resultMsg}}
+</view>

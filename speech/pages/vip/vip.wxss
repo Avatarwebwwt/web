@@ -1,0 +1,59 @@
+/* pages/vip/vip.wxss */
+.on{
+   color: #EF9603;  
+    border-bottom: 2rpx solid #da7c0c;
+} 
+.vipList{
+  width:100%;
+}
+.vipListBar{
+  width:100%;
+  border-bottom: 1rpx solid #E6E6E6;
+  padding: 33rpx 40rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+.vipListBarBox{
+  display: flex;
+  font-size: 30rpx;
+}
+.vipListBarBoxLeft{
+  width:182rpx;
+  height:60rpx;
+  color: #fff;
+  background-color: #EE4238;
+  line-height: 60rpx;
+  text-align: center;
+}
+.vipListBarBoxRight{
+  line-height: 56rpx;
+  width:320rpx;
+  height:60rpx;
+  border:2rpx solid #EE4238;
+  color: #EE4238;
+  box-sizing: border-box;
+  text-align: center;
+}
+.swiper-box {
+  margin-bottom: 0;
+}
+
+.vipListBarText{
+  color: #EF9603;
+  font-size: 30rpx;
+  line-height: 60rpx;
+}
+
+/*已使用  */
+.vipListBar .active{
+  color: #999999;
+}
+.vipListBar .leftActive{
+  background:rgba(153,153,153,1);
+}
+.vipListBar .RightActive{
+  color: #999999;
+  background:rgba(230,230,230,1);
+  border:2rpx solid #999;
+}

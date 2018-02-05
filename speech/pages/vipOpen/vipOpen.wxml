@@ -1,0 +1,21 @@
+<!--pages/vipOpen/vipOpen.wxml-->
+<view class="wrap">
+  <!-- <view class="main_title">加入团队</view> -->
+  <view class="member_mainBox" style="padding-top:40rpx;">
+    <view style="display:flex;">
+      <view class="member_mainBoxCode">授权码</view>
+      <input class="member_mainBoxNum" placeholder='请输入授权码' value="{{accreditCode}}" bindinput='accreditClick'></input>  
+    </view>
+    <view class="mian_RQ">
+        <image bindtap="rqClick" src="../../images/icon_sweepaway_nor@2x.png"></image>
+    </view> 
+  </view>
+
+  <input class="mainInp" placeholder='请输入VIP服务卡码' value='{{vipVal}}' bindinput='vipInp'></input>
+  <button class="member_mainBtn" hover-class='BtnClass' bindtap='paymentBtn'>立即开通</button>
+</view>
+
+<!--提示  -->
+<view class="msgShowBox" hidden="{{msgShow}}">
+  {{resultMsg}}
+</view>

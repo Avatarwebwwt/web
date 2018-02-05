@@ -1,0 +1,26 @@
+<!--pages/RQ/RQ.wxml-->
+<view class="wrap">
+    <view class="rq_title">长按图片保存到相册</view>
+    <view class="rq_main" bindlongpress="previewImage">
+    <image class="rq_mainBg" src="{{RQImg}}"></image>
+     <!-- <view class="rq_mainBgBox">
+      <image class="rq_mainBgImg" src="{{vcode}}"></image>
+    </view>
+    <view class="rq_mainName">我是<text>{{nickname}}</text></view>
+    <view class="rq_mainText">我为演说365代言</view>  -->
+  </view>  
+     <!-- <canvas bindlongpress="previewImage" canvas-id="RQcanvas" style="width:{{width}}rpx;height:{{height}}rpx;margin:0 auto;"></canvas>   -->
+</view>
+
+<!--底部弹框  -->
+  <action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetbindchange">
+    <block wx:for-items="{{actionSheetItems}}">
+        <action-sheet-item bindtap="{{item.bindtap}}">{{item.txt}}</action-sheet-item>
+    </block>
+    <action-sheet-cancel class="cancel">取消</action-sheet-cancel>
+</action-sheet>  
+
+<!--提示  -->
+<view class="msgShowBox" hidden="{{msgShow}}">
+  {{resultMsg}}
+</view>

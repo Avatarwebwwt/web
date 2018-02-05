@@ -1,0 +1,65 @@
+<!--pages/wallet/wallet.wxml-->
+<view class="wrap">
+  <view class="wallet_header">
+    <view class="wallet_headerTitle">总金额(元)</view>
+    <view class="wallet_headerNum">{{account}}</view>
+    <navigator hover-class='none' class="wallet_headerInfo" url="../wallet-info/wallet-info">交易明细 ></navigator>
+  </view>
+  <!--list  -->
+  <view class="center_main">
+    <view class="main_list">
+      <navigator class="main_listBar" url="../wallet-recharg/wallet-recharg">
+        <view class="main_listBarLeft">
+          <image src="../../images/icon_wallet_rechargevalue@2x.png" class="main_listBarIcon"></image>
+          <view class="main_listBarText">充值</view>
+        </view>
+        <image class="main_listBarImg" src="../../images/icon_next@2x.png"></image>
+      </navigator>
+      <view class="main_listBar" bindtap="withBtn">
+        <view class="main_listBarLeft">
+          <image class="main_listBarIcon" src="../../images/icon_wallet_cashout@2x.png"></image>
+          <view class="main_listBarText">提现</view>
+        </view>
+        <image class="main_listBarImg" src="../../images/icon_next@2x.png"></image>
+      </view>
+    </view>
+    <view class="hr9"></view>
+    <view class="main_list">
+      <navigator class="main_listBar" url="../wallet-password/wallet-password">
+        <view class="main_listBarLeft">
+          <image class="main_listBarIcon" src="../../images/icon_wallet_forget@2x.png"></image>
+          <view class="main_listBarText">支付密码重置</view>
+        </view>
+        <image class="main_listBarImg" src="../../images/icon_next@2x.png"></image>
+      </navigator>
+    </view>
+    <view class="hr9"></view>
+    <!-- <view class="main_list">
+      <navigator class="main_listBar" url="../wallet-forget/wallet-forget">
+        <view class="main_listBarLeft">
+          <image class="main_listBarIcon" src="../../images/icon_wallet_cashout@2x.png"></image>
+          <view class="main_listBarText">忘记支付密码</view>
+        </view>
+        <image class="main_listBarImg" src="../../images/icon_next@2x.png"></image>
+      </navigator>
+    </view> -->
+    <!-- <view class="hr9"></view> -->
+  </view>
+</view>
+<view class="maskWrap" hidden='{{maskShow}}' bindtap='maskHide'></view>
+<view class="walletMask" hidden='{{maskShow}}'>
+  <view class="walletMask_head">选择到账方式</view>
+  <navigator url="../wallet-with/wallet-with?key=0" class="walletMask_bar">
+    <view class="walletMask_barText">银行卡</view>
+    <!-- <image class="walletMask_barIcon" src="../../images/icon_next@2x.png"></image> -->
+  </navigator>
+   <navigator url="../wallet-with/wallet-with?key=1" class="walletMask_bar">
+    <view class="walletMask_barText">支付宝账户</view>
+    <!-- <image class="walletMask_barIcon" src="../../images/icon_next@2x.png"></image> -->
+  </navigator>
+</view>
+
+<!--提示  -->
+<view class="msgShowBox" hidden="{{msgShow}}">
+  {{resultMsg}}
+</view>

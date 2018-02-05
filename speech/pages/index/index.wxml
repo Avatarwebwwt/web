@@ -1,0 +1,83 @@
+<!--index.wxml--> 
+<view class="wrap">
+  <!-- <view class="index_header">
+       <navigator hover-class='none' url="../search/search"><image class="index_headerleft" src="../../images/icon_seach@2x.png"></image></navigator> 
+    <navigator hover-class='none' url="../center/center"><image class="index_headerRight" src="../../images/icon_myself-@2x.png"></image>
+    <text class="indexText">我的</text></navigator> 
+  </view> -->
+  <view class="index_main">
+    <!-- <view class="index_Tab">
+      <view class="index_TabLeft active">365课程</view>
+      <navigator hover-class="none" class="index_TabRight" open-type="redirect" url="../speech/speech">演说</navigator>
+      <view class="hr2"></view>
+    </view> -->
+    <view class="index_banner">
+      <swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-active-color="#fff">
+        <block wx:for="{{imgUrls}}" wx:for-index="idx" wx:for-item="item">
+          <swiper-item> 
+            <image id="{{item.flag}}" data-uid="{{item.urlid}}" bindtap='bannerClick' src="{{item.url}}" class="slide-image" width="355" height="150"/>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <!--我的课程  -->
+    <!-- <view class="myCourse" wx:if="{{!myLength==0}}" >
+      <view class="myCourse_title">
+        <view class="myCourse_titleIcon"></view>
+        <text>我的课程</text>
+      </view>
+      <scroll-view class="myCourse_box" scroll-x >
+        <navigator url="../intro/intro?id={{item.id}}" class="myCourse_boxBar" wx:for="{{mycourselist}}">
+          <image class="myCourse_boxBarImg" src="{{item.face}}"></image>
+        </navigator>
+      </scroll-view>
+    </view> -->
+    <!-- 热门分类 -->
+    <view class="addIndexClass">
+       <view class="myCourse_title">
+        <view class="myCourse_titleIcon"></view>
+        <text>热门分类</text>
+      </view>
+      <view class='addIndexClasslist'>
+        <navigator wx:for="{{list}}" url="../center-course/center-course?key={{item.id}}&title={{item.title}}">
+          <image src="{{item.url}}"></image>
+           <text>{{item.title}}</text> 
+        </navigator>
+      </view>
+    </view>
+    <view class="hr1"></view>
+    <!--365精品课程  -->
+    <view class="myCourse">
+      <view class="myCourse_title">
+        <view class="myCourse_titleIcon"></view>
+        <text>365精品课程</text>
+      </view>
+
+      <view class="myCourseImg">
+        <navigator class="mainBar" wx:for="{{jpcourselist}}" url="../intro/intro?id={{item.id}}">
+          <image class="mainBarBg" src="{{item.face}}"></image> 
+          <view class="mask"></view>
+          <view class="mainBarText">
+            <view class="mainBarTitle">{{item.title}}</view>
+            <view class="mainBarName">{{item.nickname}}</view>
+            <view class="mainBarBox">
+              <view class="mainBarBoxTime">{{item.classcount}}课时</view>
+              <view class="mainBarBoxNum">{{item.buycount}}人已购</view>
+            </view>
+            <view class="mainBarBoxPrice"><text>￥</text>{{item.money}}</view>
+          </view>
+        </navigator>
+      </view>
+      
+    </view>
+  </view>
+</view>
+<!--提示  -->
+<view class="msgShowBox" hidden="{{msgShow}}">
+  {{resultMsg}}
+</view>
+<!--  登录模板-->
+<include src="../../utils/courseList.wxml"/>
+<!-- <web-view src="{{path}}" hidden='{{hrefShow}}'></web-view> -->
+

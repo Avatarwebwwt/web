@@ -1,0 +1,44 @@
+/* pages/wallet-data/wallet-data.wxss */
+.walletDataMain{
+  width:100%;
+}
+.walletDataHead{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* padding-top: 40rpx; */
+}
+.walletDataHeadImg{
+  width:88rpx;
+  height:88rpx;
+  margin: 20rpx auto;
+}
+.walletDataTitle{
+  font-size: 30rpx;
+  color: #333333;
+  line-height: 60rpx;
+}
+.walletDataPrice{
+  font-size: 36rpx;
+  color: #333333;
+  line-height: 78rpx;
+  width:100%;
+  text-align: center;
+  font-weight: bold;
+}
+.walletDataList{
+  width:100%;
+  padding:0 20rpx;
+  box-sizing: border-box;
+  padding-top: 100rpx;
+}
+.walletDataListBar{
+  width:100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 26rpx;
+  line-height: 90rpx;
+}
+.walletDataListName{
+  color: #999999;
+}

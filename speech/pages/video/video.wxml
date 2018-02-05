@@ -1,0 +1,99 @@
+<!--pages/video/video.wxml-->
+<view class="wrap">
+  <view class="Video">
+    <video wx:if="{{vip==1}}" bindplay="playClick" poster="{{face}}" class="myVideo" id="{{videoId}}" src="{{classlistUrl}}" controls autoplay="true">
+       <!-- <cover-view class="controls"></cover-view>  -->
+    </video>
+    <!-- <video wx:else class="myVideo" poster="{{face}}" bindplay="videoBarVip" controls="false" src="{{}}" controls autoplay="true">
+    </video> -->
+    <view wx:else class="add_videoBox" bindtap="videoBarVip">
+        <image src="{{face}}" class="myVideo"></image>
+        <view class="add_videoBoxMask"></view> 
+        <image src="../../images/icon_start_boutiquebook_home_7.png" class="add_videoBoxPlay"></image>
+    </view>
+  </view>
+ <view class="BottomBlock">
+    <scroll-view bindscrolltolower="footerEvent" class="ScrollView" scroll-y="true">
+        <view class="video_header">
+          <navigator class="video_headerBox" hover-class='none' url="../data/data?id={{uid}}">
+            <image class="video_headerFace" src="{{uface}}"></image>
+            <view class="video_headerText">
+              <view class="video_headerName">{{title}}</view>
+              <view class="video_headerJob">{{position}}</view>
+            </view>
+          </navigator>
+          <view class="videoHeaderText">
+            <view class="videoHeaderText_title">{{title}}</view>
+            <view class="videoHeaderText_Text">
+              {{remark}}
+            </view>
+          </view>
+          <!--课时  -->
+          <view class="video_hour">
+            <view class="video_hourTitle">课时</view>
+            <scroll-view class="video_hourBox" scroll-x="true">
+              <view bindtap="{{vip==0?'videoBarVip':'videoBar'}}" data-id='{{item.id}}' id="{{vip==0?'':item.url}}" class="video_hourBar {{classlistUrl==item.url?'active':''}}" wx:for="{{classlist}}" wx:for-index="idx" wx:for-item="item">
+                {{idx+1}}
+                <image wx:if="{{vip==0}}" class="video_hourBarImg" src="../../images/note_vip@2x.png"></image>
+              </view>
+            </scroll-view>
+          </view>
+          <!--相关推荐  -->
+          <!-- <view class="video_hour">
+            <view class="video_hourTitle">相关推荐</view>
+            <view class="video_RecoBox">
+              <view class="video_Recommend" wx:for="{{3}}" wx:for-index="idx" wx:for-item="item">
+                <view class="video_RecommendImg"></view>
+                <view class="video_RecommendRight">
+                  <view class="video_RecommendTitle">蔡永康的学习之道</view>
+                  <view class="video_RecommendName">学以思</view>
+                </view>
+              </view>
+            </view>
+          </view> -->
+        </view>
+        <view class="hr4"></view>
+        <!-- 全部评论 -->
+        <view class="video_comment">
+          <view class="video_commentTitle">全部评论</view>
+          <view class="video_commBar" wx:for="{{list}}">
+            <view class="video_commBarImg">
+              <image src="{{item.face}}"></image>
+            </view>
+            <view class="video_commBarBox">
+              <view class="video_commBarBoxName">{{item.nickname}}</view>
+              <view class="video_commBarBoxText">{{item.content}}</view>
+              <view class="video_commBarBoxtime">
+                <view class="video_commBarBoxdate">{{item.crttm}}</view>
+                <!--点赞  -->
+                <!-- <view class="video_commBarBoxZan">
+                  <image class="video_commBarBoxIcon" src="../../images/icon_good@2x.png"></image> 
+                  <image class="video_commBarBoxIcon" src="../../images/icon_good_per@2x.png"></image>
+                  3290
+                </view> -->
+              </view>
+            </view>
+          </view>
+        </view>
+    </scroll-view>
+  </view>
+  <view class="footer" bindtap='commentBtn' hidden='{{commentShow?true:false}}'>
+    <image class="footerIcon" src="../../images/bottom_icon_comment@2x.png"></image>
+    发表评论
+  </view> 
+  <view class="footerInp" hidden='{{commentShow?false:true}}'>
+    <input placeholder='发表你的评论' bindinput='PublisInp' focus="{{commentShow?true:false}}" value='{{PublisVal}}' class="footerInpCommen"></input>
+    <button class="footerInpBtn" bindtap='PublisBtn'>发表</button> 
+  </view>
+</view>
+
+
+<!--提示  -->
+<view class="msgShowBox" hidden="{{msgShow}}">
+  {{resultMsg}}
+</view>
+
+<!--  登录模板-->
+<include src="../../utils/courseList.wxml"/>
+
+

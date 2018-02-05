@@ -1,0 +1,39 @@
+<view class="maskWrap" wx:if="{{login_maskShow}}"></view>
+<view class="maskWrapBox" wx:if='{{login_maskShow}}'>
+  <view class="maskWrapBox_head">
+    <view class="maskWrapBox_headText">{{login_loginText}}</view>
+    <view class="maskWrapBox_headClose" bindtap='login_maskHide'><image src="../../images/icon_individual_concel@2x.png"></image></view>
+  </view>
+  <form bindsubmit="login_loginBtn">
+    <view class="maskWrapBox_inp">
+      <view class="maskWrapBox_phone">
+        <image src="../../images/icon_individual_phone@2x.png" class="maskWrapBox_Icon"></image>
+        <input class="inp_phone" type='number' maxlength='11' bindinput="login_phoneInp" value='{{login_phoneVal}}' placeholder='请输入手机号'></input>
+      </view>
+        <view class="maskWrapBox_phone" hidden='{{login_paddwordInp}}'>
+        <image src="../../images/icon_individual_mima@2x.png" class="maskWrapBox_Icon"></image>
+        <input class="inp_phone" wx:if="{{login_key==3}}" bindinput="login_passwordInp" value='{{login_passwordVal}}' placeholder='请输入新密码' password></input>
+        <input class="inp_phone" password wx:else bindinput="login_passwordInp" value='{{login_passwordVal}}' placeholder='请输入密码'></input>
+      </view>
+        <view class="maskWrapBox_phone" hidden='{{login_registShow}}'>
+        <image src="../../images/icon_individual_-message@2x.png" class="maskWrapBox_Icon"></image>
+        <input class="inp_phone" maxlength='6' bindinput="login_codeInp" value='{{login_codeVal}}' placeholder='请输入短信验证码'></input>
+        <view class="inp_phoneCode {{loginis_show?'show':'hide'}}" bindtap='login_codeBtn'>验证码</view>
+        <view class="inp_phoneCode {{loginis_show?'hide':'show'}} active">{{numbers}}</view> 
+      </view> 
+    </view>
+    <view class="maskWrap_footer">
+      <view class="maskWrap_footerTop">
+        <view class="mask_footerLetf" id='{{login_key}}' bindtap='login_registtap'>{{login_registText}}</view>
+        <view class="mask_footerRight" id="3" bindtap='login_paddwordTap'>忘记密码？</view>
+      </view>
+      <button wx:if="{{login_key==2}}" class="mask_footerBtn" form-type='submit'>注册</button>
+      <button wx:elif="{{login_key==3}}" class="mask_footerBtn" form-type='submit'>修改密码</button> 
+      <button wx:else class="mask_footerBtn" form-type='submit'>登录</button> 
+      
+      <view class="mask_footerClause">注册即代表您同意
+        <navigator class="mask_footerClauHref" url=''>服务条款</navigator>
+      </view>
+    </view>
+  </form>
+</view> 

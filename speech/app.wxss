@@ -1,0 +1,731 @@
+/**app.wxss**/
+page{
+  background-color: #FFF;
+}
+.wrap{
+  width:100%;
+  font-family: PingFang-SC-Medium;
+  position: relative;
+}
+image,
+input{
+  display: block;
+}
+button{
+  padding: 0;
+  margin: 0;
+}
+button::after{
+  border:none;
+}
+
+/*提示弹窗  */
+.msgShowBox{
+  width:350rpx;
+  position: fixed;
+  text-align: center;
+  z-index: 1111;
+  font-size: 30rpx;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.8);
+  line-height: 80rpx;
+  border-radius: 10rpx;
+  left:50%;
+  margin-left: -175rpx;
+  bottom: 300rpx;
+}
+
+/* 清浮动 */
+.clear{ zoom:1;}
+.clear:after{ content:""; display:block; clear:both;}
+.fl{ float: left; }
+.fr{ float: right;}
+
+/*首页头部  */
+.index_header{
+  height:96rpx;
+  width:100%;
+  background-color: #fff;
+  display: flex;
+ justify-content:  flex-end;
+ padding: 32rpx;
+ box-sizing: border-box;
+}
+.index_header image{
+  width:44rpx;
+  height:44rpx;
+  margin:0 auto;
+  margin-top: -5rpx;
+
+}
+.index_header navigator{
+   width:60rpx;
+  height:60rpx;
+}
+
+.index_main{
+  width:100%;
+}
+.index_Tab{
+  width:100%;
+  display: flex;
+  justify-content: space-around;
+  color: #999999;
+  font-size: 32rpx; 
+  line-height: 86rpx;
+  background-color: #fff;
+  position: relative;
+}
+.index_Tab .active{
+  color: #ef9603;
+}
+.hr2,
+.hr3{
+  width:120rpx;
+  height:4rpx;
+  background-color: #ef9603;
+  position: absolute;
+  bottom:11rpx;
+}
+.hr2{
+ left:19%;
+}
+.hr3{
+  right:15%;
+}
+
+/*全部评论  */
+.video_comment{
+  padding-top: 20rpx;
+  padding-left: 40rpx;
+  padding-bottom: 138rpx;
+}
+.video_commentTitle{
+  font-size: 30rpx;
+  line-height: 72rpx;
+  color: #333;
+  width:100%;
+  border-bottom: 1rpx solid #e6e6e6;
+}
+.video_commBar{
+  width:100%;
+  display: flex;
+  border-bottom: 1rpx solid #e6e6e6;
+  padding-top: 16rpx;
+  box-sizing: border-box;
+  padding-bottom: 33rpx;
+}
+.video_commBarImg,
+.video_commBarImg image{
+  width:80rpx;
+  height:80rpx;
+  border-radius: 50rpx;
+}
+.video_commBarImg{
+   padding-top: 17rpx;
+}
+.video_commBarBoxText,
+.video_commBarBoxtime{
+  line-height: 34rpx;
+  color: #999999;
+  font-size: 24rpx;
+}
+.video_commBarBoxName{
+  font-size: 28rpx;
+  color: #333;
+  line-height: 52rpx;
+}
+.video_commBarBox{
+  width:570rpx;
+  padding-right: 40rpx;
+  padding-left: 20rpx;
+}
+.video_commBarBoxtime{
+  display: flex;
+  justify-content: space-between;
+}
+.video_commBarBoxIcon{
+  width:44rpx;
+  height:44rpx;
+  margin-top: -7rpx;
+}
+.video_commBarBoxZan{
+  display: flex;
+}
+
+/*发表评论  */
+.footer{
+  width:100%;
+  background-color: #e79f6c;
+  line-height: 98rpx;
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  left:0;
+  z-index: 10;
+  font-size: 30rpx;
+  display: flex;
+  justify-content: center;
+}
+.footerIcon{
+  width:44rpx;
+  height:44rpx;
+  margin-top: 27rpx;
+  margin-right: 20rpx;
+}
+/*评论输入框  */
+.footerInp{
+  width:100%;
+  height: 100rpx;
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  left:0;
+  z-index: 11;
+  font-size: 30rpx;
+  display: flex;
+  justify-content: space-between;
+  padding: 15rpx 20rpx;
+  box-sizing: border-box;
+}
+.footerInpCommen{
+  line-height: 70rpx;
+  height:70rpx;
+  width:570rpx;
+  background-color: #f0f0f0;
+  border:2rpx solid #e1e1e1;
+  border-radius: 10rpx;
+  padding:0 30rpx;
+  box-sizing: border-box;
+  margin-bottom: 15rpx;
+}
+.footerInpBtn{
+  width:15%;
+  background-color: #585858;
+  color: #fff;
+  font-size: 30rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+}
+
+/* conter bar */
+.center_main{
+  padding-top: 40rpx;
+  width:100%;
+  overflow: hidden;
+}
+.main_list{
+  width:100%;
+  padding-left: 20rpx;
+  box-sizing: border-box;
+}
+.main_listBar{
+  width:100%;
+  border-bottom: 1rpx solid #e6e6e6;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 20rpx;
+  box-sizing: border-box;
+}
+.main_listBarText{
+  color: #333;
+  line-height: 88rpx;
+  font-size: 30rpx;
+}
+.main_listBarLeft{
+  display: flex;
+}
+.main_listBarIcon{
+  width:50rpx;
+  height:50rpx;
+  margin-right: 20rpx;
+  margin-top: 20rpx;
+  margin-left: -5rpx;
+}
+.main_listBarImg{
+  width:14rpx;
+  height:24rpx;
+  margin-top: 32rpx;
+}
+.main_list .main_listBar:last-child{
+  border: none;
+}
+.hr9{
+  width:100%;
+  height:10rpx;
+  background-color: #f3f4f5;
+}
+
+/*支付  */
+.rechargMain{
+  width:100%;
+  line-height: 88rpx;
+  background-color: #fff;
+  display: flex;
+  padding:0 20rpx;
+  box-sizing: border-box;
+  font-size: 28rpx;
+  color: #333;
+}
+.rechargMainInp{
+  height:88rpx;
+  width:380rpx;
+}
+.rechargMainTitle{
+  width:145rpx;
+}
+.recharg_balan{
+  color: #a3a3a3;
+  line-height: 84rpx;
+  font-size: 28rpx;
+  width:100%;
+  text-indent: 20rpx;
+}
+.recharg_wechat{
+  display: flex;
+  line-height: 88rpx;
+  width:100%;
+  background-color: #fff;
+  padding: 0 20rpx;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.recharg_wechatText{
+  color: #333;
+  font-size: 30rpx;
+}
+.recharg_wechatIcon{
+  border-radius: 50%;
+  padding-top: 20rpx;
+}
+.recharg_wechatIcon,
+.recharg_wechatIcon image{
+  width:50rpx;
+  height:50rpx;
+}
+.recharg_Btn{
+  width:630rpx;
+  height:88rpx;
+  border-radius: 10rpx;       
+  background-color: #999999;
+  margin: 60rpx auto;
+  font-size: 34rpx;
+  color: #fff;
+}
+
+/*按钮样式  */
+.walletBtnClass{
+  background-color: #ef9603;
+}
+.BtnClass{
+ background-color: #f1a426;
+  opacity: 0.7;
+}
+
+.info_head{
+  width:100%;
+  height: 20rpx;
+	background-color: #e6e6e6;
+}
+
+/*遮罩层  */
+.maskWrap{
+  position: fixed;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  background:rgba(0, 0, 0, 0.6);
+  z-index: 11;
+}
+
+/*消息 分销  */
+.news_main{
+  width:100%;
+  padding-left: 20rpx;
+  box-sizing: border-box;
+}
+.news_face image{
+  width: 100rpx;
+	height: 100rpx;
+  border-radius: 50%;
+}
+.news_face{
+  padding-top: 20rpx;
+  margin-right: 20rpx;
+}
+.news_list{
+  display: flex;
+  justify-content: space-between;
+  padding-right: 20rpx;
+  width:100%;
+  box-sizing: border-box;
+  border-bottom:1rpx solid #e6e6e6; 
+}
+.news_listLeft{
+  display: flex;
+  height:140rpx;
+}
+.news_Box{
+  color: #333333;
+  padding: 15rpx 0;
+  /* display: flex; */
+   /* align-content:center; */
+  /* flex-direction: row ; */
+}
+.news_BoxTop{
+  display: flex;
+}
+.hr10{
+  width: 10rpx;
+	height: 10rpx;
+	background-color: #ef5d03;
+  border-radius: 50rpx;
+  margin-top: 17rpx;
+  margin-right: 5rpx;
+}
+.news_BoxText,
+.news_BoxTitle{
+  font-size: 26rpx;
+  line-height: 55rpx;
+  width:400rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.news_time{
+  font-size: 28rpx;
+  color: #999999;
+  line-height: 140rpx; 
+}
+
+/*我的课程  */
+.mainBar{
+  width:100%;
+  height: 330rpx;
+  position: relative;
+  border-radius: 10rpx;
+  margin-bottom: 20rpx;
+}
+.mainBarBg{
+  position: absolute;
+  left:0;
+  top:0;
+  width:100%;
+  height: 330rpx;
+  border-radius: 10rpx;
+}
+.mask{
+  width:100%;
+  height:100%;
+   /* background: rgba(120, 120, 120, 0.3);   */
+  position: absolute;
+  left:0;
+  top:0;
+  z-index: 2;
+  border-radius: 10rpx;
+}
+.mainBarText{
+  position: absolute;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  z-index: 3;
+  padding-left: 20rpx;
+  box-sizing: border-box;
+  color: #fff;
+  padding-top: 30rpx;
+}
+.mainBarTitle{
+  font-size: 34rpx;
+}
+.mainBarName{
+  font-size: 24rpx;
+  line-height: 72rpx;
+}
+.mainBarBox{
+  display: flex;
+}
+.mainBarBoxTime,
+.mainBarBoxNum{
+  /* width: 120rpx; */
+  padding: 0 20rpx;
+	height: 40rpx;
+	border-radius: 10rpx;
+	border: solid 1rpx #ffffff;
+  text-align: center;
+  line-height: 38rpx;
+  font-size: 24rpx;
+  box-sizing: border-box;
+  margin-right: 15rpx;
+}
+.mainBarBoxPrice{
+  font-size: 36rpx;
+  line-height: 120rpx;
+  color: #FF0000;
+  font-weight: bold;
+}
+.mainBarBoxPrice text{
+  font-size: 20rpx;
+}
+
+/*密码设置  */
+.forget_main{
+  width:100%;
+  box-sizing: border-box;
+  padding: 40rpx 20rpx;
+}
+.forget_mainBar{
+  background-color: #fff;
+  height:88rpx;
+  width:100%;
+  margin-bottom: 20rpx;
+  border-radius: 10rpx;
+  padding-left: 20rpx;
+  box-sizing: border-box;
+  display: flex;
+}
+.forget_mainBarInp{
+  height: 88rpx;
+  line-height: 88rpx;
+  font-size: 30rpx;
+  color: #333;
+  width:500rpx;
+}
+.forget_mainBarCode{
+  width: 150rpx;
+	height: 50rpx;
+  line-height: 50rpx;
+	background-color: #ef9603;
+	border-radius: 5rpx;
+  font-size: 20rpx;
+  color: #fffefe;
+  margin-top: 19rpx;
+}
+.forget_mainBottom{
+  font-size: 28rpx;
+  color: #999999;
+  padding-left: 20rpx;
+}
+.recharg_Btn{
+  margin: 150rpx auto;
+}
+
+.forget_mainBar .active,
+.maskWrapBox_phone .active{
+  background-color: #e6e6e6;
+  color: #ef9603;
+}
+.hide{
+  display: none;
+}
+.forget_mainBar .show{
+  display: block;
+}
+
+/*登录注册  */
+.maskWrapBox{
+  background-color: #fff;
+  width:640rpx;
+  height:650rpx;
+  border-radius: 10rpx;
+  position: fixed;
+  left:50%;
+  top:50%;
+  margin-left: -320rpx;
+  margin-top: -325rpx;
+  padding: 0 39rpx;
+  box-sizing: border-box;
+  z-index: 12;
+}
+.maskWrapBox_head{
+  display: flex;
+  width:100%;
+  justify-content: space-between;
+}
+.maskWrapBox_headText{
+  font-size: 32rpx;
+  line-height: 112rpx;
+  color: #333;
+}
+.maskWrapBox_headClose{
+  padding-top: 20rpx;
+}
+.maskWrapBox_headClose,
+.maskWrapBox_headClose image{
+  width:50rpx;
+  height:50rpx;
+}
+.maskWrapBox_inp{
+  width: 100%;
+}
+.maskWrapBox_phone{
+  width:100%;
+  border-bottom: 1rpx solid #e6e6e6;
+  display: flex;
+  height: 80rpx;
+  box-sizing: border-box;
+}
+.maskWrapBox_Icon{
+  width:50rpx;
+  height:50rpx;
+  margin-right: 20rpx;
+  margin-top: 12rpx;
+}
+.inp_phone{
+  line-height: 78rpx;
+  color: #333;
+  font-size: 28rpx;
+  height:78rpx;
+  width:380rpx;
+}
+.inp_phoneAdd{
+  color: #1e8fe1;
+  font-size: 26rpx;
+  border-bottom: 1rpx solid #1e8fe1;
+  line-height: 28rpx;
+  height:28rpx;
+  padding-top: 28rpx;
+}
+.inp_phoneCode{
+  width:100rpx;
+  height: 40rpx;
+  background-color: #e79f6c;
+  font-size: 22rpx;
+  border-radius: 5rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 40rpx;
+  margin-top: 23rpx;
+}
+.maskWrap_footer{
+  height:220rpx;
+  width:100%;
+  position: absolute;
+  left:0;
+  bottom: 0;
+  padding: 0 39rpx;
+  box-sizing: border-box;
+}
+.maskWrap_footerTop{
+  display: flex;
+  justify-content: space-between;
+  line-height: 60rpx;
+  font-size: 24rpx;
+}
+.mask_footerLetf{
+  color: #999999;
+}
+.mask_footerRight{
+  color: #ef9603;
+}
+.mask_footerBtn{
+  width:100%;
+  height:68rpx;
+  background-color: #e79f6c;
+  text-align: center;
+  line-height: 68rpx;
+  border-radius: 10rpx;
+  font-size: 34rpx;
+  color: #fff;
+}
+.mask_footerBtn::after{
+  border:none;
+}
+.mask_footerClause{
+  line-height: 62rpx;
+  text-align: center;
+  font-size: 20rpx;
+  color: #999999;
+  padding-top:29rpx; 
+}
+.mask_footerClauHref{
+  color: #333333;
+  display: inline-block;
+  line-height: 22rpx;
+  border-bottom: 1rpx solid #333333;
+}
+
+/*tab切换  */
+.swiper-tab{  
+    width: 100%;  
+    border-bottom: 1rpx solid #e6e6e6;  
+    text-align: center;  
+    line-height: 68rpx;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+  }  
+.swiper-tab-list{  
+    font-size: 30rpx;  
+    width:100rpx;
+    color: #999999;
+    font-weight: bold;  
+    
+}  
+.on{
+   color: #333333;  
+    border-bottom: 4rpx solid #da7c0c;
+}  
+.swiper-box{ display: block;  width: 100%; overflow: hidden; margin-bottom: 100rpx;}
+
+.indexText{
+  font-size: 24rpx;
+  line-height: 30rpx;
+  color: #ef9603;
+  display: block;
+  width:60rpx;
+  text-align: center;
+}
+
+/*授权码  */
+.member_mainBox{
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  line-height: 60rpx;
+  padding-top: 20rpx;
+  padding-bottom: 40rpx;
+}
+.member_mainBoxNum{
+  width:340rpx;
+  height:60rpx;
+  background-color: #e6e6e6;
+  font-size: 30rpx;
+  text-align: center;
+  border-top-right-radius: 10rpx;
+  border-bottom-right-radius: 10rpx;
+}
+.member_mainBoxCode{
+  width: 200rpx;
+	height: 60rpx;
+	background-color: #e79f6c;
+  font-size: 34rpx;
+  text-align: center;
+  color: #FFFFFF;
+  border-top-left-radius: 10rpx;
+  border-bottom-left-radius: 10rpx;
+}
+
+
+/*播放样式  */
+.add_videoBoxMask{
+  position: absolute;
+  left:0;
+  top:0;
+  width:100%;
+  height:400rpx;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 11;
+}
+.add_videoBoxPlay{
+  position: absolute;
+  width:100rpx;
+  height:100rpx;
+  left:50%;
+  top:50%;
+  margin-top: -50rpx;
+  margin-left: -50rpx;
+  z-index: 12;
+}

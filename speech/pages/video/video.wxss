@@ -1,0 +1,163 @@
+/* pages/video/video.wxss */
+page {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+.wrap{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+.BottomBlock {
+    display: flex;
+    flex: 1;
+    overflow: auto;
+    overflow-y:auto;
+}
+
+.Video,
+.myVideo{
+  width:100%;
+  height:400rpx;
+}
+/* .Video,
+.myVideo{
+  position: fixed;
+  left:0;
+  top:0;
+  z-index: 10;
+} */
+.add_videoBox .myVideo{
+  background-color: #000;
+}
+.add_videoBox{
+  position: relative;
+  width:100%;
+  height:400rpx;
+}
+
+.video_header{
+  width:100%;
+  padding-left: 40rpx;
+  box-sizing: border-box;
+  /* padding-top: 400rpx; */
+}
+.video_headerBox{
+  display: flex;
+  padding-top: 40rpx;
+}
+.video_headerFace,
+.video_headerFace image{
+  width:80rpx;
+  height:80rpx;
+  border-radius: 50%;
+}
+.video_headerText{
+  padding-left: 20rpx;
+  font-size: 30rpx;
+  line-height: 40rpx;
+}
+.video_headerJob{
+  color: #666666;
+  padding-top: 5rpx;
+}
+.videoHeaderText{
+  padding-top: 25rpx;
+  padding-bottom: 35rpx;
+}
+.videoHeaderText_title{
+  line-height: 60rpx;
+  font-size: 30rpx;
+}
+.videoHeaderText_Text{
+  color: #999999;
+  line-height: 34rpx;
+  font-size: 20rpx;
+}
+/*课时  */
+.video_hour{
+  border-top: 1rpx solid #e6e6e6;
+  width:100%;
+  box-sizing: border-box;
+  padding-bottom: 40rpx;
+  overflow: hidden;
+}
+.video_hourTitle{
+  line-height: 70rpx;
+  color: #333;
+  font-size: 32rpx;
+}
+.video_hourBox{
+  white-space: nowrap;
+  display: flex;
+  width:100%;
+  overflow: auto;
+}
+.video_hourBox .active{
+  color: #e79f6c;
+  border:1rpx solid #e79f6c;
+}
+.video_hourBar{
+  width:80rpx;
+  height:80rpx;
+  box-sizing: border-box;
+  border: 2rpx solid #dadada;
+  text-align: center;
+  line-height: 76rpx;
+  color: #333;
+  border-radius: 5rpx;
+  margin-right: 20rpx;
+  display: inline-block;
+  font-size: 32rpx;
+  position: relative;
+}
+.video_hourBarImg{
+  width:40rpx;
+  height:20rpx;
+  position: absolute;
+  right:0;
+  top: 0;
+}
+
+/*相关推荐  */
+.video_RecoBox{
+  width:100%;
+}
+.video_Recommend{
+  width:100%;
+  display: flex;
+  margin-bottom: 20rpx;
+}
+.video_RecommendImg{
+  width:200rpx;
+  height:150rpx;
+  background: #999;
+  border-radius: 10rpx;
+}
+.video_RecommendRight{
+ padding-top: 33rpx;
+  line-height: 44rpx;
+  padding-left: 20rpx;
+}
+.video_RecommendTitle{
+  font-size: 26rpx;
+  color: #333;
+}
+.video_RecommendName{
+  color: #999999;
+  font-size: 22rpx;
+}
+.hr4{
+  height:10rpx;
+  background-color: #e6e6e6;
+  width:100%;
+}
+
+/*登录框  */
+.maskWrapBox{
+  top:0;
+  margin-top:400rpx;
+}

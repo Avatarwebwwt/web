@@ -1,0 +1,110 @@
+/* pages/wallet-bank/wallet-bank.wxss */
+page{
+  height:100%;
+  background-color: #f6f6f6;
+}
+.wrap{
+  margin-bottom: 200rpx;
+}
+.rechargMains{
+  line-height: 86rpx;
+  font-size: 30rpx;
+  width:710rpx;
+  left:50%;
+  background-color: #f6f6f6;
+  text-align: center;
+  border:2rpx dashed #c0c0c2;
+  border-radius: 10rpx;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+.rechargMainsBox{
+  height:200rpx;
+  width:100%;
+  background-color: #f6f6f6;
+  position: fixed;
+  bottom: 0;
+  left:0;
+  z-index: 10;
+  box-sizing: border-box;
+  padding-top: 50rpx;
+}
+.rechargMainIcon{
+  width:40rpx; 
+  height:40rpx;
+  margin-top: 23rpx;
+  margin-right: 20rpx;
+
+}
+.bank_header{
+  background-color: #f6f6f6;
+  color: #666;
+}
+.recharg_Btn{
+  margin: 190rpx auto;
+}
+
+.recharg_wechatEmpty{
+  display: flex;
+  position: relative;
+  width:100%;
+   border-radius: 10rpx;
+   height:170rpx;
+}
+.recharg_wechatEmptyLogo{
+  width:68rpx;
+  height:68rpx;
+  background-color: #fff;
+  border-radius: 50%;
+  margin-top: 37rpx;
+  margin-left: 25rpx;
+}
+.recharg_wechatTexts{
+  display: flex;
+  justify-content:center;
+  flex-direction:column;
+  font-size:30rpx;
+  color: #fff;
+  line-height: 60rpx;
+  padding-left: 30rpx;
+}
+.recharg_wechatBtn{
+  width:100rpx;
+  background-color: #FD1C41;
+  height:100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 30rpx;
+  color: #fff;
+  border-top-right-radius:10rpx;
+  border-bottom-right-radius:10rpx;
+  z-index: 10;
+  position: absolute;
+  right:0;
+  top:0;
+}
+.bank_MianBox{
+  background-color: #344371;
+  height:170rpx; 
+  width:710rpx;
+  box-sizing: border-box;
+  margin:0 auto;
+  border-radius: 10rpx; 
+  margin-bottom: 30rpx;
+  position: relative;
+}
+.bank_MianBox .active{
+  background-color: #6887E3;
+}
+.recharg_wechatIcon{
+  padding-top: 30rpx;
+}
+
+.radio-group{
+    font-size: 26rpx;
+    display: flex;
+    flex-direction: column;
+  }
+

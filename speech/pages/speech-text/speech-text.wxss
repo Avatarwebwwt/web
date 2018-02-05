@@ -1,0 +1,32 @@
+/* pages/speech-text/speech-text.wxss */
+.wrap{
+  padding: 0 40rpx;
+  box-sizing: border-box;
+}
+.textHeader{
+  line-height: 52rpx;
+  padding: 30rpx 0;
+  color: #333;
+}
+.textHeader_title{
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.textHeader_name{
+  font-size: 30rpx;
+}
+.textHeader_bar{
+  width:150rpx;
+  height:2rpx;
+  background-color: #ef9603;
+  margin-bottom: 30rpx;
+}
+.textContent{
+  width:100%;
+}
+.textContent_Text{
+  color: #666666;
+  line-height: 44rpx;
+  font-size: 28rpx;
+  margin-bottom: 35rpx;
+}

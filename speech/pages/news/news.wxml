@@ -1,0 +1,38 @@
+<!--pages/news/news.wxml-->
+<view class="wrap">
+  <view class="news_main">
+    <view class="news_list" wx:for="{{newsList}}">
+      <navigator hover-class='none' wx:if="{{item.type==1}}" url="../wallet/wallet" class="news_listLeft">
+        <view class="news_face">
+          <image src="{{item.face}}"></image>
+        </view>
+        <view class="news_Box">
+            <view class="news_BoxTop">
+              <view class="hr10" wx:if="{{item.status==0}}"></view>
+              <view class="news_BoxTitle">{{item.nickname}}</view>
+            </view>
+            <view class="news_BoxText">{{item.content}}</view>
+        </view>
+      </navigator>
+      <view wx:else class="news_listLeft">
+        <view class="news_face">
+          <image src="{{item.face}}"></image>
+        </view>
+        <view class="news_Box">
+            <view class="news_BoxTop">
+              <view class="hr10" wx:if="{{item.status==0}}"></view>
+              <view class="news_BoxTitle">{{item.nickname}}</view>
+            </view>
+            <view class="news_BoxText">{{item.content}}</view>
+        </view>
+      </view>
+      <view class="news_time">{{item.crttm}}</view>
+    </view>
+  </view>
+</view>
+
+
+<!--提示  -->
+<view class="msgShowBox" hidden="{{msgShow}}">
+  {{resultMsg}}
+</view>

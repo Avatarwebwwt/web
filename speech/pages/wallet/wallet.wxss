@@ -1,0 +1,58 @@
+/* pages/wallet/wallet.wxss */
+.wallet_header{
+  width:100%;
+  height:400rpx;
+  background-color: #ef9603;
+  color: #fff;
+  text-align: center;
+  padding-top: 90rpx;
+  box-sizing:border-box;
+}
+.wallet_headerTitle,
+.wallet_headerInfo{
+  font-size: 28rpx;
+}
+.wallet_headerNum{
+  line-height: 160rpx;
+  font-size: 70rpx;
+  font-weight: bold;
+}
+
+/*遮罩层  */
+.walletMask{
+  width:520rpx;
+  position: fixed;
+  left:50%;
+  top:40%;
+  margin-left: -260rpx;
+  z-index: 15;
+  background-color: #fff;
+  border-radius: 10rpx;
+}
+.walletMask_head{
+  width:100%;
+  font-size: 34rpx;
+  line-height: 72rpx;
+  text-align: center;
+  color: #333;
+}
+.walletMask_bar{
+  /* display: flex; */
+  width:100%;
+  text-align: center;
+  /* padding-left:40rpx;
+  padding-right:20rpx; */
+  /* box-sizing: border-box;
+  justify-content: space-between; */
+  border-top: 1rpx solid #e6e6e6;
+}
+.walletMask_barText{
+    line-height: 94rpx;
+    font-size: 34rpx;
+}
+.walletMask_barIcon{
+  width:14rpx;
+  height:24rpx;
+  margin-top:35rpx;
+}
+

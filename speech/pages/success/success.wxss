@@ -1,0 +1,26 @@
+/* pages/success/success.wxss */
+.img{
+  width:140rpx;
+  height:140rpx;
+  margin: 0 auto;
+  margin-bottom: 24rpx;
+}
+.wrap{
+  padding-top: 130rpx;
+  text-align: center;
+}
+.text{
+  font-size: 38rpx;
+  color: #333;
+  line-height: 160rpx;
+}
+.btn{
+  height:88rpx;
+  width:690rpx;
+  background-color: #ef9603;
+  border-radius: 10rpx;
+  color: #fff;
+  line-height: 88rpx;
+  text-align: center;
+  margin: 0 auto;
+}

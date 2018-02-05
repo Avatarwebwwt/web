@@ -1,0 +1,86 @@
+<!--pages/intro/intro.wxml-->
+<view class="wrap">
+  <view class="header">
+    <view class="mainBar">
+     <image class="mainBarBg" src="{{face}}"></image> 
+    <!-- <view class="mask"></view> -->
+    <view class="mainBarText">
+      <view class="mainBarTitle">{{title}}</view>
+      <view class="mainBarName">{{nickname}}</view>
+      <view class="mainBarBox">
+        <view class="mainBarBoxTime">{{classcount}}课时</view>
+        <view class="mainBarBoxNum">{{buycount}}人已购</view>
+      </view>
+       <!-- <view class="mainBarBoxPrice"><text>￥</text>{{money}}</view> -->
+    </view>
+  </view>
+
+  </view>
+  <view class="swiper-tab">  
+    <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">简介</view>  
+    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">目录</view>  
+  </view>  
+    
+  <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight-227}}px" bindchange="bindChange">  
+      <!-- 简介 -->  
+      <swiper-item>  
+        <scroll-view class="intro_main" style="height:{{winHeight-227}}px" scroll-y="true">
+          <view class="intro_mainBar">
+            <view class="intro_mainBarTitle">课程介绍</view>
+            <view class="intro_mainTextBox">
+              <view class="intro_mainBarText">{{introduce}}</view>
+            </view>
+          </view>
+          <view class="intro_mainBar">
+            <view class="intro_mainBarTitle">讲者介绍</view>
+            <view class="intro_mainTextName">{{nickname}}</view>
+            <view class="intro_mainTextAuth">{{position}}</view>
+            <view class="intro_mainTextAuth">{{sign}}</view>
+          </view>
+          <!--订阅须知  -->
+          <view class="intro_mainBar">
+            <view class="intro_mainBarTitle">订阅须知</view>
+            <view class="intro_mainTextAuth">内容版权归主讲人所有，未经主讲人许可，任何人不得以形
+式复制、转载和使用课程内容</view>
+            <view class="intro_mainTextAuth">本课程有效期：自购买日起1年时间。</view>
+            <view class="intro_mainTextAuth">本商品为虚拟内容服务，已经购买成功概不退款，请您理解。</view>
+          </view>
+        </scroll-view>  
+      </swiper-item>  
+      <!-- 目录 -->  
+      <swiper-item>  
+        <scroll-view class="Catalog" style="height:{{winHeight-227}}px" scroll-y="true">
+          <navigator url="../video/video?id={{kcId}}&url={{item.url}}&vid={{item.id}}" class="CatalogBar" hover-class='CatalogBarActive' wx:for="{{classlist}}">
+            <view class="CatalogBarImg">
+                <image src="../../images/icon_play_@2x.png" class="CatalogBarImg1"></image> 
+               <image src="../../images/icon_play_per@2x.png" class="CatalogBarImg2"></image> 
+            </view>
+            <view class="CatalogBarText">
+               <view class="CatalogBarTitle">{{item.title}}</view>
+               <view class="CatalogBarTime">
+                 <image src="../../images/icon_clock@2x.png" class="CatalogBarTimeIcon"></image>
+                 <view class="CatalogBarTimeBox">{{item.tmlong}}</view>
+               </view>
+            </view>
+          </navigator>
+        </scroll-view>  
+      </swiper-item>  
+  </swiper>  
+
+  <!--底部  -->
+  <view class="intro_footer">
+    <view class="intro_footerLeft">
+      <view class="intro_footerPrice">￥<text>{{money}}</text></view>
+      <navigator class="intro_footerText" url="../center-member/center-member">成为VIP会员免费观看</navigator>
+    </view>
+    <view bindtap='purchaseBtn' class="intro_footerBtn" wx:if="{{vip==0}}">立即购买</view>
+    <navigator url="../video/video?id={{kcId}}&url={{classlist[0].url}}&vid={{classlist[0].id}}" class="intro_footerBtn" wx:else>免费观看</navigator> 
+  </view>
+  <!-- <navigator url="../video/video?id={{kcId}}" class="intro_footer intro_footerActive" hover-class="BtnClass" wx:else>免费观看</navigator> -->
+</view>
+<!--提示  -->
+<view class="msgShowBox" hidden="{{msgShow}}">
+  {{resultMsg}}
+</view>
+<!--  登录模板-->
+<include src="../../utils/courseList.wxml"/>

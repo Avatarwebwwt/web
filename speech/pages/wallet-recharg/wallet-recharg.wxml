@@ -1,0 +1,20 @@
+<!--pages/wallet-recharg/wallet-recharg.wxml-->
+<view class="wrap">
+  <view class="rechargMain">
+    <text class="rechargMainTitle">充值余额</text>
+    <input class="rechargMainInp" maxlength='5' placeholder='请输入充值金额' type='number' bindinput='balanceInp' value='{{balanceVal}}'></input>
+  </view>
+  <view class="recharg_balan">账户余额：<text>{{account}}</text>元</view>
+  <view class="recharg_wechat">
+    <view class="recharg_wechatText">微信支付</view>
+    <view class="recharg_wechatIcon"></view>
+  </view>
+  <button hidden="{{btnShow?true:false}}" class="recharg_Btn walletBtnClass" hover-class="BtnClass" bindtap='passwordBtn'>确定</button> 
+  <button hidden="{{btnShow ? false:true}}" class="recharg_Btn">确定</button>
+</view>
+
+<!--提示  -->
+<view class="msgShowBox" hidden="{{msgShow}}">
+  {{resultMsg}}
+</view>
+

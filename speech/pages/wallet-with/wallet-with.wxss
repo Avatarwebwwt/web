@@ -1,0 +1,74 @@
+/* pages/wallet-with/wallet-With.wxss */
+@import "../../utils/password.wxss";
+page{
+  height:100%;
+  background-color: #f6f6f6;
+}
+.withMain{
+  display: flex;
+  height:180rpx;
+  align-items:center;
+}
+.rechargMainActive{
+   /* margin-left: -290rpx;  */
+   display: block;
+}
+.rechargMain{
+  margin-bottom: 22rpx;
+}
+.rechargMainIcon,
+.rechargMainIcon image{
+  width: 14rpx;
+	height: 24rpx;
+}
+.rechargMainIcon{
+  /* padding-top: 77rpx; */
+}
+.withMainHeeader{
+  width:100%;
+  display: flex;
+  line-height: 108rpx;
+  background-color: #fff;
+  font-size: 28rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  margin-bottom:22rpx;
+}
+.withMainHeeader .rechargMainText{
+  color: #999999;
+  margin-left: 50rpx;
+   height:108rpx;
+  font-size: 28rpx;
+  width:400rpx;
+}
+
+.rechargMainInpRight{
+  color: #ef9603;
+}
+.rechargMain{
+  /* justify-content: space-between; */
+} 
+.recharg_Btn{
+  margin: 165rpx auto;
+  margin-bottom: 0;
+}
+.recharg_Explain{
+  color:#EF9603;
+  width:630rpx;
+  margin: 0 auto;
+  font-size: 30rpx;
+  line-height:70rpx;
+  text-align: right;
+}
+.rechargMainTitleActive{
+  width:190rpx;
+}
+.rechargMainTextActive,
+.rechargMainActive{
+  width:495rpx;
+  overflow: hidden; 
+}
+.rechargMainTextActive text{
+  display: block;
+  line-height: 50rpx;
+}

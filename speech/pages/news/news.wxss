@@ -1,0 +1,4 @@
+/* pages/news/news.wxss */
+.news_BoxText{
+  width:480rpx;
+}

@@ -1,0 +1,79 @@
+<!--pages/center-member/center-member.wxml-->
+<view class="wrap">
+  <view class="member_header">
+    <view class="member_headerName">{{name}}</view>
+    <view class="member_headerKt" wx:if="{{vip==1}}">会员有效期至：{{viptm}}</view>
+    <view class="member_headerKt" wx:else>当前未开通</view>
+  </view>
+  <view class="member_main">
+    <view class="member_mainBar">
+      <view class="member_mainBarTitle">
+        <text>一年期会员</text>
+        <image src="../../images/icon_individual_vip@2x.png"></image>
+      </view>
+      <view class="member_mainBarNum">365元</view>
+    </view>
+    <!--微信支付  -->
+    <view class="member_mainBar" bindtap='activePayment'>
+      <view class="member_mainBarTitle">
+        <text>微信支付</text>
+      </view>
+      <view class="member_mainBarNum">
+         <image hidden='{{is_Show?false:true}}' src="../../images/icon_payment_per@2x.png"></image> 
+         <image hidden='{{is_Show?true:false}}' src="../../images/icon_payment@2x.png"></image> 
+      </view>
+    </view>
+    <!--钱包支付  -->
+    <view class="member_mainBar" bindtap='wechatPayment'>
+      <view class="member_mainBarTitle">
+        <text>钱包支付</text>
+      </view>
+      <view class="member_mainBarNum">
+        <text>余额：{{account}}</text>
+        <image hidden='{{is_Show?true:false}}' src="../../images/icon_payment_per@2x.png"></image> 
+        <image hidden='{{is_Show?false:true}}' src="../../images/icon_payment@2x.png"></image>
+      </view>
+    </view>
+    <!--授权码  -->
+    <view class="member_mainBox">
+      <view style="display:flex;">
+        <view class="member_mainBoxCode">授权码</view>
+        <input class="member_mainBoxNum" placeholder='请输入授权码' value="{{accreditCode}}" bindinput='accreditClick'></input>
+      </view>
+      <view class="mian_RQ">
+        <image bindtap="rqClick" src="../../images/icon_sweepaway_nor@2x.png"></image>
+          <!-- <image src="../../images/icon_sweepaway_sel@2x.png" hidden=''></image> -->
+      </view>
+    </view>
+    <button class="member_mainBtn" wx:if="{{vip==0}}" bindtap='paymentBtn' hover-class="BtnClass">立即开通</button>
+    <button class="member_mainBtn" wx:else bindtap='paymentBtn' hover-class="BtnClass">立即续费</button>
+     <navigator wx:if="{{hrefState==1}}" url='../vipOpen/vipOpen?code={{accreditCode}}' hover-class='none' class="addService">我有VIP服务卡？</navigator> 
+    <view wx:else class="addService" bindtap='hrefStop'>我有VIP服务卡？</view>
+    <!--会员权益  -->
+    <view class="member_mainTitle">会员权益</view>
+    <view class="mainMemberList">
+      <view class="mainMemberListBar">
+        <view class="mainMemberListBar_text">1.演说</view>
+        <text>（1）线上学习30-100个专业知识视频。</text>
+        <text>（2）开通发布微演说的权限，表达自己让世界听见。(app)</text>
+      </view>
+       <view class="mainMemberListBar">
+        <view class="mainMemberListBar_text">2.读书</view>
+        <text>（1）开通语音解读书籍的权限，让更多人知道你的独到见解。(app)</text>
+        <text>（2）一年50-2000本VIP免费书籍任意听(app)</text>
+      </view> 
+      <view class="mainMemberListBar">
+        <view class="mainMemberListBar_text">3.线下</view>
+        <text>获得加入线下分会的权益。线下分会定期举办演说沙龙、各种派对和资源交流会。</text>
+      </view>
+    </view>
+  </view>
+</view>
+<!--提示  -->
+<view class="msgShowBox" hidden="{{msgShow}}">
+  {{resultMsg}}
+</view>
+<!--输入钱包密码-->
+<include src="../../utils/password.wxml"/> 
+<!--  登录模板-->
+ <include src="../../utils/courseList.wxml"/> 

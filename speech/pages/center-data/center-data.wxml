@@ -1,0 +1,51 @@
+<!--pages/center-data/center-data.wxml-->
+<view class="wrap">
+  <form bindsubmit="infoBtn">
+    <view class="hr9"></view>
+    <view class="hr9"></view>
+    <view class="dataHeader">
+      <view class="dataHeaderBar dataHeaderTop"  bindtap='setUpFace'>
+        <view class="dataHeaderTitle">头像</view>
+        <view class="dataHeaderFace">
+          <image src="{{face}}"></image>
+        </view>
+      </view>
+      <view class="dataHeaderBar">
+        <view class="dataHeaderTitle">姓名</view>
+        <input class="dataHeaderInp" value='{{name}}' bindinput='nameInp' maxlength='12' placeholder='请填写您的姓名'></input>
+      </view>
+      <view class="dataHeaderBar">
+        <view class="dataHeaderTitle">职称</view>
+        <input class="dataHeaderInp" value='{{position}}' bindinput='jobInp' maxlength='20' placeholder='请填写您的职称'></input>
+      </view>
+      <view class="dataHeaderBar">
+        <view class="dataHeaderTitle">手机号</view>
+        <text class="dataHeaderInp">{{phone}}</text>
+      </view>
+    </view>
+    <view class="hr9"></view>
+    <view class="dataMain">
+      <view class='dataMainTitle'>个人简介</view>
+      <view class="dataMainTetx">
+         <textarea show-confirm-bar="false"  cursor-spacing="100" maxlength="50" value='{{sign}}' bindinput='briefInp' class="dataMainTetxBox"></textarea> 
+        <view class="dataMainTextNum">{{isNumber}}</view>
+      </view>
+    </view>
+    <!--保存  -->
+    <button class="centerData_Btn" form-type='submit' hover-class="BtnClass" >保存</button>
+  </form>
+</view>
+<!--头像上传  -->
+<action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetbindchange">
+<block wx:for="{{actionSheetItems}}" wx:key="unique">
+<action-sheet-item bindtap="{{item.bindtap}}">{{item.txt}}</action-sheet-item>
+</block>
+<action-sheet-cancel class="cancel">取消</action-sheet-cancel>
+</action-sheet>
+
+<!--提示  -->
+<view class="msgShowBox" hidden="{{msgShow}}">
+  {{resultMsg}}
+</view>
+
+

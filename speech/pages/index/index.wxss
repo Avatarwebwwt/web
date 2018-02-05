@@ -1,0 +1,99 @@
+/**index.wxss**/
+.index_banner,
+.index_banner swiper,
+.index_banner image{
+  width:100%;
+  height:350rpx;
+}
+
+.myCourse{
+  width:100%;
+  background-color: #fff;
+  overflow: hidden;
+}
+.myCourse_title{
+  width:100%;
+  display: flex;
+  padding-left: 20rpx;
+  box-sizing: border-box;
+}
+.myCourse_titleIcon{
+  width:6rpx;
+  height:30rpx;
+  background-color: #e79f6c;
+  margin-right:10rpx;
+  margin-top: 20rpx;
+}
+.myCourse_title text{
+  color: #333333;
+  line-height: 72rpx;
+  font-size: 32rpx;
+}
+.myCourse_box{
+  white-space: nowrap;
+  display: flex;
+  width:100%;
+  padding-left: 25rpx;
+  box-sizing: border-box;
+  height:200rpx;
+  overflow : auto; 
+}
+.myCourse_boxBar{
+  width:300rpx;
+  height:180rpx;
+  margin-right:25rpx;
+  display: inline-block;
+}
+.myCourse_boxBarImg{
+  width:300rpx;
+  height:180rpx;
+  border-radius: 10rpx;
+}
+.hr1{
+  width:100%;
+  height:10rpx;
+  background-color: #f3f4f5;
+}
+.myCourseImg{
+  padding: 0 20rpx;
+  padding-bottom: 20rpx;
+}
+.myCourseImg image{
+  width:100%;
+  height:330rpx;
+  border-radius: 10rpx;
+}
+
+/*热门分类  */
+.addIndexClass{
+  width:100%;
+}
+.addIndexClasslist{
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  width:100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom:20rpx;
+  flex-wrap:  wrap;
+}
+.addIndexClasslist image{
+  width:345rpx;
+  height:150rpx;
+  margin-bottom: 20rpx;
+  border-radius: 10rpx;
+ }
+ .addIndexClasslist navigator{
+     position: relative;
+ }
+.addIndexClasslist text{
+  position: absolute;
+  line-height: 140rpx;
+  text-align: center;
+  width: 100%;
+  display: block;
+  font-size: 36rpx;
+  left:0;
+  top:0;
+  color: #fff;
+}

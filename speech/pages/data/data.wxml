@@ -1,0 +1,35 @@
+<!--pages/data/data.wxml-->
+<view class="wrap">
+  <view class="dataBg">
+    <image src="../../images/bg@2x.png"></image>
+  </view>
+  <view class="dataMain">
+    <image class="dataFaceBg" src="../../images/bg_card_nor@2x.png"></image>
+    <view class="dataMainImg">
+      <image class="dataMainImg_face" src="{{face}}"></image>
+       <image class="dataMainImg_Vip" src="../../images/icon_opening_mine_2_highlight@2x.png" wx:if="{{vip==1}}"></image> 
+      <image class="dataMainImg_Vip" src="../../images/icon_opening_mine_1_nor@2x.png" wx:else></image>
+    </view>
+    <view class="dataMainName">{{nickname}}</view>
+    <view class="dataMainJob">{{position}}</view>
+    <view class="dataMainPhone">{{phone}}</view>
+     <view class="dataMainText">{{sign}}</view> 
+    <view class="dataMainBox">
+      <view class="dataMainBox_left">
+        <view class="dataMainBox_Text">会员</view>
+        <view class="dataMainBox_Num">{{member}}</view>
+      </view>
+       <view class="hr6"></view> 
+      <view class="dataMainBox_right">
+        <view class="dataMainBox_Text">授权码</view>
+        <view class="dataMainBox_Num">{{code}}</view>
+      </view>
+    </view>
+    <view class="dataMainRq"><image src="{{vcode}}"></image></view>
+  </view>
+</view>
+
+<!--提示  -->
+<view class="msgShowBox" hidden="{{msgShow}}">
+  {{resultMsg}}
+</view>

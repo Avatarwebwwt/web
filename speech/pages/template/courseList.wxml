@@ -1,0 +1,39 @@
+<template name="loginMask">
+  <view class="maskWrap" hidden='{{maskShow}}'></view>
+<view class="maskWrapBox" hidden='{{maskShow}}'>
+  <view class="maskWrapBox_head">
+    <view class="maskWrapBox_headText">{{loginText}}</view>
+    <view class="maskWrapBox_headClose" bindtap='maskHide'><image src="../../images/icon_individual_concel@2x.png"></image></view>
+  </view>
+  <form bindsubmit="loginBtn">
+    <view class="maskWrapBox_inp">
+      <view class="maskWrapBox_phone">
+        <image src="../../images/icon_individual_phone@2x.png" class="maskWrapBox_Icon"></image>
+        <input class="inp_phone" maxlength='11' bindinput="phoneInp" value='{{phoneVal}}' placeholder='请输入手机号'></input>
+      </view>
+        <view class="maskWrapBox_phone" hidden='{{paddwordInp}}'>
+        <image src="../../images/icon_individual_mima@2x.png" class="maskWrapBox_Icon"></image>
+        <input class="inp_phone" bindinput="passwordInp" value='{{passwordVal}}' placeholder='请输入密码'></input>
+      </view>
+        <view class="maskWrapBox_phone" hidden='{{registShow}}'>
+        <image src="../../images/icon_individual_-message@2x.png" class="maskWrapBox_Icon"></image>
+        <input class="inp_phone" maxlength='4' bindinput="codeInp" value='{{codeVal}}' placeholder='请输入短信验证码'></input>
+        <view class="inp_phoneCode">验证码</view>
+      </view> 
+    </view>
+    <view class="maskWrap_footer">
+      <view class="maskWrap_footerTop">
+        <view class="mask_footerLetf" id='{{key}}' bindtap='registtap'>{{registText}}</view>
+        <view class="mask_footerRight" id="3" bindtap='paddwordTap'>忘记密码？</view>
+      </view>
+       <button wx:if="{{key==2}}" class="mask_footerBtn" form-type='submit'>注册</button>
+      <button wx:elif="{{key==3}}" class="mask_footerBtn" form-type='submit'>修改密码</button> 
+      <button wx:else class="mask_footerBtn" form-type='submit'>登录</button> 
+       
+      <view class="mask_footerClause">注册即代表您同意
+        <navigator class="mask_footerClauHref" url=''>服务条款</navigator>
+      </view>
+    </view>
+  </form>
+</view> 
+</template>

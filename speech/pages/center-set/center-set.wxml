@@ -1,0 +1,20 @@
+<!--pages/center-set/center-set.wxml-->
+<view class="wrap">
+  <view class="set_head">
+    <!-- <view class="set_headBar" bindtap="emptyCache">
+      <view class="set_headBarText">清除缓存</view>
+      <view class="set_headBarRight">{{size}}</view>
+    </view> -->
+    <view class="set_headBar">
+      <view class="set_headBarText">关于我们</view>
+      <image class="set_headBarImg" src="../../images/icon_next@2x.png"></image>
+    </view>
+  </view>
+  <view class="hr9"></view>
+  <view class="set_headBarOut">退出登录</view>
+  <view class="hr9"></view>
+</view>
+<!--提示  -->
+<view class="msgShowBox" hidden="{{msgShow}}">
+  {{resultMsg}}
+</view>

@@ -1,0 +1,24 @@
+<!--pages/wallet-forget/wallet-forget.wxml-->
+<view class="wrap">
+  <view class="forget_main">
+    <view class="forget_mainBar">
+      <!-- <input class="forget_mainBarInp" maxlength='11' bindinput="phoneEvent" placeholder='请输入手机号' value='{{phoneVal}}'></input> -->
+      <text class="forget_mainBarInp">15992528940</text>
+    </view>
+    <view class="forget_mainBar">
+      <input class="forget_mainBarInp" maxlength='4' bindinput="codeEvent" value='{{codeVal}}' placeholder='请输入验证码'></input>
+      <button class="forget_mainBarCode {{is_show?'show':'hide'}}" bindtap='codeGet'>获取验证码</button>
+      <button class="forget_mainBarCode {{is_show?'hide':'show'}} active">{{numbers}}</button>
+    </view>
+    <view class="forget_mainBar">
+      <input class="forget_mainBarInp" type='number' maxlength='6' bindinput="passEvent" value='{{passVal}}' placeholder='请输入新的支付密码'></input>
+    </view>
+    <view class="forget_mainBottom">密码由6位数字组成</view>
+  </view>
+  <button hidden="{{btnShow?true:false}}" class="recharg_Btn walletBtnClass" hover-class="BtnClass" bindtap='passwordBtn'>确定</button> 
+  <button hidden="{{btnShow ? false:true}}" class="recharg_Btn">确定</button>
+</view>
+<!--提示  -->
+<view class="msgShowBox" hidden="{{msgShow}}">
+  {{resultMsg}}
+</view>

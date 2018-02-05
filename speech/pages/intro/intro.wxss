@@ -1,0 +1,165 @@
+/* pages/intro/intro.wxss */
+.header{
+  width: 100%;
+  height:330rpx;
+}
+
+/*mian  */
+.intro_main{
+  padding: 0 20rpx;
+  width:100%; 
+  box-sizing: border-box;
+}
+.mainBar{
+  border-radius: 0;
+}
+.mainBarBg{
+  border-radius: 0;
+}
+.mask{
+  border-radius: 0;
+}
+.intro_mainBar{
+  border-bottom: 1rpx solid #e6e6e6;
+  box-sizing: border-box;
+  width:100%;
+  padding: 10rpx 20rpx 35rpx 20rpx;
+}
+.intro_mainBarTitle{
+  line-height: 52rpx;
+  font-size: 30rpx;
+  color: #333;
+}
+.intro_mainBarText{
+  line-height: 40rpx;
+  color: #999999;
+  font-size: 26rpx;
+  margin-bottom: 20rpx;
+}
+.mainBarText{
+  padding-top: 100rpx;
+}
+.intro_mainTextBox{
+  width:100%;
+}
+.intro_mainTextName{
+  line-height: 44rpx;
+  color: #999999;
+  font-size: 26rpx;
+  margin-bottom: 17rpx;
+}
+.intro_mainTextAuth{
+  line-height: 46rpx;
+  color: #999999;
+  font-size: 26rpx;
+}
+
+
+/*底部按钮  */
+.intro_footer{
+  background-color: #f6f6f6;
+  width:100%;
+  height:100rpx;
+  position: fixed;
+  bottom: 0;
+  left:0;
+  padding: 12rpx 40rpx;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
+  box-shadow: 0px 0px 8px 0px 
+		rgba(90, 90, 90, 0.25); 
+}
+.intro_footerBtn{
+  width:200rpx;
+  height:60rpx;
+  background-color: #ef9603;
+  text-align: center;
+  line-height: 60rpx;
+  color: #fff;
+  font-size: 28rpx;
+  border-radius: 10rpx;
+  margin-top: 8rpx;
+}
+.intro_footerPrice {
+  font-size: 22rpx;
+  color: #ff0000;
+}
+.intro_footerPrice text{
+  font-size: 34rpx;
+  line-height: 46rpx;
+}
+.intro_footerText{
+  color: #999999;
+  font-size: 20rpx;
+  line-height: 30rpx;
+}
+
+.Catalog{
+  width:100%;
+}
+.CatalogBar{
+  display: flex;
+  padding-left: 40rpx;
+  width:100%;
+  box-sizing: border-box;
+}
+.CatalogBarImg{
+  width:44rpx;
+  height:44rpx;
+  margin-right: 20rpx;
+  padding-top: 28rpx;
+}
+ .CatalogBarImg image{
+  width:44rpx;
+  height:44rpx;
+} 
+.CatalogBarImg2{
+  display: none;
+}
+.CatalogBarActive .CatalogBarImg2{
+  display: block;
+}
+.CatalogBarActive .CatalogBarImg1{
+  display: none;
+}
+
+.CatalogBarText{
+  border-bottom: 1rpx solid #e6e6e6;
+  width:645rpx;
+}
+.CatalogBarTitle{
+  font-size: 30rpx;
+  line-height: 62rpx;
+  /* color: #333 */
+}
+.CatalogBarTime{
+  display: flex;
+  padding-bottom: 10rpx;
+}
+.CatalogBarTimeIcon{
+  width:22rpx;
+  height:22rpx;
+  margin-top: 6rpx;
+  margin-right: 10rpx;
+}
+.CatalogBarTimeBox{
+  color: #999999;
+  font-size: 26rpx;
+}
+
+.intro_footerActive{
+  background-color: #e79f6c;
+  color: #fff;
+  text-align: center;
+ border-radius: 0; 
+ display: block;
+ height: auto;
+ line-height: 80rpx;
+}
+.CatalogBarActive{
+  color: #ef9603;
+}
+
+
+

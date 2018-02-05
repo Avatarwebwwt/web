@@ -1,0 +1,135 @@
+/* pages/data/data.wxss */
+page{
+  height:100%;
+}
+.wrap{
+  width:100%;
+  height:100%;
+  position: relative;
+}
+.dataBg{
+  width:100%;
+  height:100%;
+  position: absolute;
+  left:0;
+  top:0;
+  background-color: #999;
+  z-index: 10;
+}
+.dataBg image{
+  width:100%;
+  height:100%;
+}
+.dataMain{
+  width:604rpx;
+  /* background-color: #fff; */
+  border-radius: 20rpx;
+  position: absolute;
+  margin-left:-300rpx;
+  margin-top: -333rpx;
+  left:50%;
+  top:50%;
+  z-index: 11;
+  padding-top: 90rpx;
+}
+.dataMainImg{
+  width:124rpx;
+  height:124rpx;
+  border-radius: 50%;
+  position: absolute;
+  left:50%;
+  margin-left: -62rpx;
+  top:-62rpx;
+}
+.dataMainImg_face{
+  width:124rpx;
+  height:124rpx;
+  border-radius: 50%;
+}
+.dataMainImg_Vip{
+  width:50rpx;
+  height:50rpx;
+  position: absolute;
+  right:0;
+  top:0;
+  margin-right: -20rpx;
+  margin-top: 25rpx;
+}
+.dataMainName{
+  font-size: 30rpx;
+  width:100%;
+  text-align: center;
+  font-weight: bold;
+  line-height: 54rpx;
+  color: #333;
+}
+.dataMainJob,
+.dataMainPhone{
+  color: #666666;
+  line-height: 40rpx;
+  font-size: 20rpx;
+  text-align: center;
+  width:100%;
+}
+.dataMainText{
+  line-height: 48rpx;
+  color: #999;
+  font-size: 22rpx;
+  padding: 0 40rpx;
+  padding-top: 22rpx;
+  text-align: center;
+  overflow:hidden; 
+  text-overflow:ellipsis;
+  display:-webkit-box; 
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:2; 
+}
+.dataMainBox{
+  display: flex;
+  justify-content: space-between;
+  position: relative; 
+  text-align: center;
+  padding: 0 40rpx;
+  padding-top: 55rpx;
+  width:100%;
+  box-sizing: border-box;
+}
+.dataMainBox_Text{
+  color: #666666;
+  font-size: 28rpx;
+  line-height: 28rpx;
+  
+}
+.hr6{
+  height:90rpx;
+  width:2rpx;
+  background-color: #e6e6e6;
+  position: absolute;
+  top:62rpx;
+  left:50%;
+  margin-left:-1rpx;
+}
+.dataMainBox_Num{
+  font-size: 50rpx;
+  font-weight: bold;
+  line-height: 104rpx;
+}
+.dataMainRq{
+  width:94rpx;
+  height:94rpx;
+  margin: 0 auto;
+  padding-top: 20rpx;
+  padding-bottom: 25rpx;
+}
+.dataMainRq image{
+  width:94rpx;
+  height:94rpx;
+}
+.dataFaceBg{
+  position: absolute;
+  left:0;
+  top:0;
+   width:604rpx;
+   height:661rpx;
+   z-index: -1;
+}

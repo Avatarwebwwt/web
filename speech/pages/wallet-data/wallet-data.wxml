@@ -1,0 +1,32 @@
+<!--pages/wallet-data/wallet-data.wxml-->
+<view class="wrap">
+  <view class="info_head"></view>
+  <view class="walletDataMain">
+     <image class="walletDataHeadImg" src="{{face}}"></image>
+    <view class="walletDataHead">
+      <view class="walletDataTitle">{{remark}}</view>
+    </view>
+    <view class="walletDataPrice">-{{money}}</view>
+    <view class="walletDataList">
+      <view class="walletDataListBar">
+        <view class="walletDataListName">对方账户</view>
+        <view class="walletDataListText">{{nickname}}</view>
+      </view>
+       <view class="walletDataListBar">
+        <view class="walletDataListName">创建时间</view>
+        <view class="walletDataListText">{{crttm}}</view>
+      </view>
+       <view class="walletDataListBar">
+        <view class="walletDataListName">订单号</view>
+        <view class="walletDataListText">{{no}}</view>
+      </view>
+    </view>
+  </view>
+  <!-- <view class="info_head"></view> -->
+</view>
+
+
+<!--提示  -->
+<view class="msgShowBox" hidden="{{msgShow}}">
+  {{resultMsg}}
+</view>

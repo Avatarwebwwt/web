@@ -1,0 +1,46 @@
+<!--pages/wallet-with/wallet-With.wxml-->
+<view class="wrap">
+  <!-- 银行卡 -->
+  <navigator url="../wallet-bank/wallet-bank" class="rechargMain withMain" wx:if="{{types==0}}">
+    <view class="rechargMainTitle rechargMainTitleActive">到账银行卡</view> 
+    <text class="rechargMainActive" wx:if="{{length==0}}">请添加银行卡</text>
+    <view wx:elif="{{length==1}}" class="rechargMainText rechargMainTextActive">
+      <block wx:for="{{list}}">
+        <text wx:if="{{item.status==1}}" id="{{item.id}}">{{item.bankname}}</text>
+        <text wx:if="{{item.status==1}}" id="{{item.id}}">({{item.cardno}})</text>
+      </block>
+    </view> 
+    <view wx:elif="{{length==2}}" class="rechargMainText rechargMainTextActive">
+      <block wx:for="{{list}}">
+        <text wx:if="{{item.id==isOid}}" id="{{isOid}}">{{item.bankname}}</text>
+        <text wx:if="{{item.id==isOid}}" id="{{isOid}}">({{item.cardno}})</text>
+      </block>
+    </view>
+
+    <view class="rechargMainIcon"><image src="../../images/icon_next@2x.png"></image></view>
+  </navigator>
+  <!--支付宝  -->
+  <view class="withMainHeeader" wx:else>
+    <text class="rechargMainTitle">到账支付宝</text>
+    <input class="rechargMainText" placeholder='请输入支付宝账号' value='{{cardno}}' bindinput='cardnoInp'></input>
+  </view>
+
+  <view class="rechargMain clear" style="margin:0;">
+    <text class="rechargMainTitle">提现金额</text>
+    <input class="rechargMainInp" maxlength='5' value='{{balanceVal}}' bindinput="balanceInp" placeholder='可提现金额{{account}}' type='number'></input>
+    <view class="rechargMainInpRight fr" bindtap='withClick'>全部提取</view>
+  </view>
+  <view class="recharg_balan">当前账户余额:<text>{{account}}</text>元</view>
+  <button hidden="{{btnShow?true:false}}" class="recharg_Btn walletBtnClass" hover-class="BtnClass" bindtap='passwordBtn'>确定</button> 
+  <button hidden="{{btnShow ? false:true}}" class="recharg_Btn">确定</button>
+  <navigator hover-class='none' class="recharg_Explain">提现说明</navigator>
+</view>
+
+<!--输入钱包密码-->
+<include src="../../utils/password.wxml"/> 
+
+<!--提示  -->
+<view class="msgShowBox" hidden="{{msgShow}}">
+  {{resultMsg}}
+</view>
+

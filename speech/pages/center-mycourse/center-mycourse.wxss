@@ -1,0 +1,5 @@
+/* pages/center-mycourse/center-mycourse.wxss */
+.wrap{
+  padding: 20rpx;
+  box-sizing: border-box;
+}

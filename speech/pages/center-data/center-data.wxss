@@ -1,0 +1,87 @@
+/* pages/center-data/center-data.wxss */
+.dataHeader{
+  width:100%;
+  padding-left: 20rpx;
+  box-sizing: border-box;
+}
+.dataHeaderBar{
+  width:100%;
+  border-bottom: 1rpx solid #e6e6e6;
+  display: flex;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  color: #333;
+}
+.dataHeaderTitle{
+  font-size: 30rpx;
+  line-height: 88rpx;
+  width:140rpx;
+}
+.dataHeaderInp{
+  font-size: 28rpx;
+  line-height: 88rpx;
+  height:88rpx;
+  width:500rpx;
+}
+.dataHeaderFace,
+.dataHeaderFace image{
+  width:100rpx;
+  height:100rpx;
+  border-radius: 50%;
+}
+.dataHeaderTop{
+  padding: 10rpx 20rpx;
+  justify-content: space-between; 
+}
+.dataHeaderTop .dataHeaderTitle{
+  line-height: 100rpx;
+}
+.dataHeader .dataHeaderBar:last-child{
+  border:none;
+}
+/*简介  */
+.dataMain{
+  width:100%;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+.dataMainTitle{
+  font-size: 30rpx;
+  color: #333333;
+  line-height: 76rpx;
+  text-indent: 20rpx;
+}
+.dataMainTetx{
+  width:100%;
+  border: solid 2rpx #e6e6e6;
+  height:250rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+  position: relative;
+  padding-bottom: 40rpx;
+}
+.dataMainTetxBox{
+  width:100%;
+  height:100%;
+  font-size: 28rpx;
+  line-height: 40rpx;
+}
+.dataMainTextNum{
+  position: absolute;
+  right:0;
+  bottom: 0;
+  font-size: 28rpx;
+  color: #333333;
+  line-height: 42rpx;
+  margin: 0 10rpx;
+}
+
+/*保存  */
+.centerData_Btn{
+  width:630rpx;
+  height:88rpx;
+  background-color: #ef9603;
+  font-size: 36rpx;
+  color: #fff;
+  margin: 100rpx auto;
+}

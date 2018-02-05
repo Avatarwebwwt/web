@@ -1,0 +1,7 @@
+/* pages/center-distri/center-distri.wxss */
+.news_BoxText{
+ color: #999999;
+}
+.distriActive{
+  color: #ef9603;
+}

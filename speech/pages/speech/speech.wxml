@@ -1,0 +1,31 @@
+<!--pages/speech/speech.wxml-->
+<view class="wrap">
+  <view class="index_main">
+    <view class="videoBox" wx:for="{{list}}">
+      <view class="index_video">
+        <!-- <video bindplay="startPlay" bindpause="stopVideo" poster="{{item.face}}" id="{{item.id}}" src="{{item.url}}" controls></video> -->
+        <video id="index{{index}}" src="{{ item.url }}" wx:if="{{playIndex == index}}"></video>
+        <view id="{{index}}" class="cover" style="display: {{ playIndex == index ? 'none' : 'block' }};" bindtap="videoPlay">
+          <image class="index_video" src="{{ item.face }}"></image>
+          <view class="add_videoBoxMask"></view> 
+          <image src="../../images/icon_start_boutiquebook_home_7.png" class="add_videoBoxPlay"></image>
+        </view>
+      </view>
+
+      <navigator url="../speech-deta/speech-deta?id={{item.id}}" class="index_Text">
+        <view class="index_TextBox">
+          <view class="index_TextName">{{item.nickname}}</view>
+          <view class="index_TextTime">{{item.crttm}}</view>
+        </view>
+        <view class="index_TextTitle">{{item.title}}</view>
+        <view class="index_TextContent">{{item.sign}}</view>
+      </navigator>
+      <view class="addActive"></view>
+    </view>
+  </view>  
+</view>
+
+<!--提示  -->
+<view class="msgShowBox" hidden="{{msgShow}}">
+  {{resultMsg}}
+</view>

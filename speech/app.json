@@ -1,0 +1,67 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/wallet-bank/wallet-bank",
+    "pages/center/center",
+    "pages/wallet/wallet",
+    "pages/center-data/center-data",
+    "pages/intro/intro",
+    "pages/data/data",
+    "pages/speech/speech",
+    "pages/video/video",
+    "pages/center-set/center-set",
+    "pages/center-course/center-course",
+    "pages/news/news",
+    "pages/center-distri/center-distri",
+    "pages/RQ/RQ",
+    "pages/center-member/center-member",
+    "pages/wallet-forget/wallet-forget",
+    "pages/wallet-password/wallet-password",
+    "pages/wallet-data/wallet-data",
+    "pages/wallet-info/wallet-info",
+    "pages/wallet-add/wallet-add",
+    "pages/wallet-with/wallet-with",
+    "pages/wallet-recharg/wallet-recharg",
+    "pages/speech-deta/speech-deta",
+    "pages/speech-text/speech-text",
+    "pages/search/search",
+    "pages/center-distri2/center-distri2",
+    "pages/vip/vip",
+    "pages/vipOpen/vipOpen",
+    "pages/webpage/webpage",
+    "pages/center-mycourse/center-mycourse",
+    "pages/success/success"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ef9603",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "#fff"
+  },
+  "tabBar": {
+    "selectedColor": "#EF9602",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "课程",
+        "iconPath": "images/icon_class_nor@2x.png",
+        "selectedIconPath": "images/icon_class_highlight@2x.png"
+      },
+      {
+        "pagePath": "pages/speech/speech",
+        "text": "演说",
+        "iconPath": "images/icon_yanshuo_nor@2x.png",
+        "selectedIconPath": "images/icon_yanshuo_hig@2x.png"
+      },
+      {
+        "pagePath": "pages/center/center",
+        "text": "我的",
+        "iconPath": "images/icon_my_nor@2x.png",
+        "selectedIconPath": "images/icon_my_highight@2x.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000
+  }
+}
